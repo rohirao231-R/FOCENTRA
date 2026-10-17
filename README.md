@@ -1,9 +1,12 @@
 # FOCENTRA
 
 <p align="center">
-  <img src="public/hero.png" alt="FOCENTRA" width="180" />
+  <img
+    src="assets/focentra-banner.png"
+    alt="FOCENTRA — Find your focus. Make it count."
+    width="100%"
+  />
 </p>
-
 <h3 align="center">Find your focus. Make it count.</h3>
 
 <p align="center">
