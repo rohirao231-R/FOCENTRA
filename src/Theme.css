@@ -1,0 +1,1096 @@
+:root { --theme-bg:#f5faf6;--theme-panel:#fff;--theme-card:linear-gradient(135deg,rgba(255,255,255,.94),rgba(239,250,242,.84));--theme-card-solid:#fff;--theme-glass:rgba(255,255,255,.72);--theme-text:#173326;--theme-muted:#738078;--theme-accent:#299c62;--theme-accent-secondary:#b6e8c7;--theme-soft:rgba(41,156,98,.1);--theme-border:rgba(41,156,98,.2);--theme-glow:rgba(41,156,98,.18);--theme-shadow:rgba(30,80,50,.1);--theme-input:rgba(255,255,255,.86);--theme-button-text:#fff;--theme-danger:#c83d4d;--theme-success:#16734a;--theme-success-bg:rgba(35,160,100,.1); }
+html[data-theme="light-green"] { --theme-bg:#f5faf6;--theme-panel:#fff;--theme-card:linear-gradient(135deg,rgba(255,255,255,.96),rgba(235,249,239,.86));--theme-card-solid:#fff;--theme-glass:rgba(255,255,255,.78);--theme-text:#173326;--theme-muted:#738078;--theme-accent:#299c62;--theme-accent-secondary:#b6e8c7;--theme-soft:rgba(41,156,98,.1);--theme-border:rgba(41,156,98,.2);--theme-glow:rgba(41,156,98,.18);--theme-shadow:rgba(30,80,50,.1);--theme-input:rgba(255,255,255,.86); }
+html[data-theme="light-purple"] { --theme-bg:#faf9ff;--theme-panel:#fff;--theme-card:linear-gradient(135deg,rgba(255,255,255,.97),rgba(246,240,255,.9));--theme-card-solid:#fff;--theme-glass:rgba(255,255,255,.82);--theme-text:#28203d;--theme-muted:#7c718d;--theme-accent:#8755e8;--theme-accent-secondary:#c9f04d;--theme-soft:rgba(135,85,232,.1);--theme-border:rgba(135,85,232,.22);--theme-glow:rgba(135,85,232,.24);--theme-shadow:rgba(91,51,143,.12);--theme-input:#fff;--theme-danger:#c83d4d;--theme-success:#4e8b1b; }
+html[data-theme="light-red"] { --theme-bg:#fff7f7;--theme-panel:#fff;--theme-card:linear-gradient(135deg,rgba(255,255,255,.97),rgba(255,238,240,.9));--theme-card-solid:#fff;--theme-glass:rgba(255,255,255,.8);--theme-text:#3d2026;--theme-muted:#92767b;--theme-accent:#e5484d;--theme-accent-secondary:#ffb7be;--theme-soft:rgba(229,72,77,.1);--theme-border:rgba(229,72,77,.22);--theme-glow:rgba(229,72,77,.2);--theme-shadow:rgba(140,35,45,.1);--theme-input:#fff;--theme-danger:#b42336;--theme-success:#16734a; }
+html[data-theme="light-blue"] { --theme-bg:#f1f8ff;--theme-panel:#fff;--theme-card:linear-gradient(135deg,rgba(255,255,255,.97),rgba(229,243,255,.9));--theme-card-solid:#fff;--theme-glass:rgba(255,255,255,.82);--theme-text:#18324a;--theme-muted:#6e8294;--theme-accent:#2778bd;--theme-accent-secondary:#f4ce47;--theme-soft:rgba(39,120,189,.1);--theme-border:rgba(39,120,189,.22);--theme-glow:rgba(39,120,189,.22);--theme-shadow:rgba(30,80,130,.12);--theme-input:#fff;--theme-danger:#c83d4d;--theme-success:#16734a; }
+html[data-theme="light-orange"] { --theme-bg:#fff8ef;--theme-panel:#fff;--theme-card:linear-gradient(135deg,rgba(255,255,255,.97),rgba(255,241,222,.9));--theme-card-solid:#fff;--theme-glass:rgba(255,255,255,.82);--theme-text:#382b21;--theme-muted:#8a7867;--theme-accent:#e77b20;--theme-accent-secondary:#a5a5a5;--theme-soft:rgba(231,123,32,.1);--theme-border:rgba(231,123,32,.22);--theme-glow:rgba(231,123,32,.2);--theme-shadow:rgba(125,72,22,.12);--theme-input:#fff;--theme-danger:#c83d4d;--theme-success:#16734a; }
+html[data-theme="dark-blood"] { color-scheme:dark;--theme-bg:#08070b;--theme-panel:#100c12;--theme-card:linear-gradient(135deg,rgba(26,10,17,.94),rgba(8,7,12,.84));--theme-card-solid:#100c12;--theme-glass:rgba(28,10,18,.72);--theme-text:#fff0f3;--theme-muted:#b69aa3;--theme-accent:#ff234e;--theme-accent-secondary:#780d2b;--theme-soft:rgba(255,35,78,.13);--theme-border:rgba(255,35,78,.32);--theme-glow:rgba(255,35,78,.32);--theme-shadow:rgba(255,0,48,.16);--theme-input:rgba(14,8,13,.92);--theme-button-text:#fff;--theme-danger:#ff7b8f;--theme-success:#ff8ca3;--theme-success-bg:rgba(255,35,78,.12); }
+html[data-theme="dark-green"] { color-scheme:dark;--theme-bg:#06120d;--theme-panel:#0a1a12;--theme-card:linear-gradient(135deg,rgba(13,50,34,.94),rgba(5,18,12,.9));--theme-card-solid:#0a1a12;--theme-glass:rgba(13,48,33,.72);--theme-text:#edfff4;--theme-muted:#9ab7a6;--theme-accent:#6af0ae;--theme-accent-secondary:#174d36;--theme-soft:rgba(106,240,174,.12);--theme-border:rgba(106,240,174,.25);--theme-glow:rgba(106,240,174,.25);--theme-shadow:rgba(0,0,0,.3);--theme-input:rgba(4,20,13,.9);--theme-button-text:#052414;--theme-danger:#ff7b8f;--theme-success:#8affc1;--theme-success-bg:rgba(106,240,174,.1); }
+html[data-theme="dark-purple"] { color-scheme:dark;--theme-bg:#0a0614;--theme-panel:#100a20;--theme-card:linear-gradient(135deg,rgba(49,18,81,.72),rgba(9,6,20,.94));--theme-card-solid:#100a20;--theme-glass:rgba(27,13,48,.76);--theme-text:#f6edff;--theme-muted:#b6a5d0;--theme-accent:#39e7ff;--theme-accent-secondary:#a653ff;--theme-soft:rgba(57,231,255,.12);--theme-border:rgba(95,177,255,.32);--theme-glow:rgba(57,231,255,.36);--theme-shadow:rgba(72,20,150,.28);--theme-input:rgba(11,6,24,.92);--theme-button-text:#07111d;--theme-danger:#ff78bc;--theme-success:#7df8ff;--theme-success-bg:rgba(57,231,255,.1); }
+html[data-theme="dark-orange"] { color-scheme:dark;--theme-bg:#090909;--theme-panel:#14100c;--theme-card:linear-gradient(135deg,rgba(63,29,8,.82),rgba(8,8,8,.94));--theme-card-solid:#14100c;--theme-glass:rgba(34,18,9,.78);--theme-text:#fff4e9;--theme-muted:#bba28d;--theme-accent:#ff851b;--theme-accent-secondary:#6b3210;--theme-soft:rgba(255,133,27,.13);--theme-border:rgba(255,133,27,.3);--theme-glow:rgba(255,133,27,.34);--theme-shadow:rgba(255,91,0,.18);--theme-input:rgba(12,10,8,.92);--theme-button-text:#201006;--theme-danger:#ff7b8f;--theme-success:#ffc18a;--theme-success-bg:rgba(255,133,27,.1); }
+html[data-theme="dark-yellow"] { color-scheme:dark;--theme-bg:#0b0b07;--theme-panel:#151408;--theme-card:linear-gradient(135deg,rgba(55,49,10,.82),rgba(9,9,7,.95));--theme-card-solid:#151408;--theme-glass:rgba(34,31,8,.76);--theme-text:#fffde5;--theme-muted:#c0ba8a;--theme-accent:#f5dc35;--theme-accent-secondary:#6d6212;--theme-soft:rgba(245,220,53,.13);--theme-border:rgba(245,220,53,.29);--theme-glow:rgba(245,220,53,.31);--theme-shadow:rgba(165,140,0,.16);--theme-input:rgba(13,13,7,.92);--theme-button-text:#211d00;--theme-danger:#ff8b8b;--theme-success:#eaff78;--theme-success-bg:rgba(245,220,53,.1); }
+html,body { min-height:100%; }
+body { background:var(--theme-bg)!important;color:var(--theme-text);transition:background .35s,color .25s; }
+body::before { content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 12% 0%,var(--theme-soft),transparent 40%),radial-gradient(ellipse at 92% 88%,var(--theme-glow),transparent 38%); }
+html[data-theme="dark-blood"] body::after { content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.48;background-image:radial-gradient(circle at 10% 22%,#ff345e 0 1px,transparent 2px),radial-gradient(circle at 78% 36%,#b60b36 0 1.5px,transparent 2px),radial-gradient(circle at 42% 74%,#ff8ba2 0 1px,transparent 2px),radial-gradient(circle at 91% 82%,#ff234e 0 1px,transparent 2px),radial-gradient(circle at 24% 62%,#c71e46 0 1px,transparent 2px);background-size:230px 230px,310px 310px,190px 190px,270px 270px,350px 350px;animation:bloodMoonParticles 24s linear infinite; }
+@keyframes bloodMoonParticles { from { background-position:0 0,0 0,0 0,0 0,0 0; } to { background-position:230px -230px,-310px 310px,190px -190px,-270px 270px,350px -350px; } }
+.app-shell { position:relative;isolation:isolate;background:transparent!important;color:var(--theme-text); }
+.sidebar,.main-panel,.topbar,.page-content,.dashboard-card,.stat-card,.timer-card,.placeholder-page,.friend-row,.chat-panel,.chat-page-welcome,.study-groups-page,.study-group-card,.goal-card,.leaderboard-card,.modal-card { color:var(--theme-text); }
+.sidebar { background:var(--theme-card)!important;border-color:var(--theme-border)!important;backdrop-filter:blur(24px); }
+.main-panel { background:transparent!important; }
+.topbar { background:var(--theme-glass)!important;border-color:var(--theme-border)!important;backdrop-filter:blur(22px); }
+.brand-name,.breadcrumb strong,.page-content h1,.page-content h2,.page-content h3,.stat-value,.friend-main-info strong,.chat-page-welcome h2 { color:var(--theme-text); }
+.sidebar-label,.breadcrumb span,.page-content p,.stat-label,.friend-main-info span,.friend-main-info p,.chat-page-welcome p { color:var(--theme-muted); }
+.nav-item,.sidebar-profile,.sidebar-tip,.search-box,.notification-button,.topbar-avatar,.dnd-toggle,.dashboard-card,.stat-card,.timer-settings-card,.timer-display-card,.friend-row,.friends-panel,.chat-panel,.chat-page-welcome,.chat-sidebar,.chat-conversation,.chat-composer,.chat-message-content,.chat-bubble,.placeholder-page,.focus-completion-modal,.study-groups-page,.study-group-card,.goal-card,.leaderboard-card { background:var(--theme-glass)!important;color:var(--theme-text);border-color:var(--theme-border)!important;backdrop-filter:blur(20px); }
+.nav-item:hover,.nav-item:focus-visible,.dashboard-card:hover,.stat-card:hover,.friend-row:hover,.notification-button:hover,.topbar-avatar:hover,.search-box:focus-within,.chat-composer:focus-within { border-color:var(--theme-accent)!important;box-shadow:0 0 0 3px var(--theme-glow),0 10px 30px var(--theme-shadow)!important; }
+.nav-active,.active-indicator,.brand-icon,.profile-avatar,.friend-avatar,.chat-mini-avatar,.timer-primary-button,.hero-button,.friend-chat-button,.accept-request-button,.focus-completion-save,.chat-composer button,.apply-timer-button { background:var(--theme-accent)!important;color:var(--theme-button-text,#fff)!important; }
+.nav-active { box-shadow:inset 0 0 0 1px var(--theme-border),0 0 24px var(--theme-glow)!important; }
+.sidebar-profile,.sidebar-tip,.search-box,.notification-button,.topbar-avatar,.dnd-toggle,.dashboard-card,.stat-card,.timer-settings-card,.timer-display-card,.friend-row,.friends-panel,.chat-panel,.chat-page-welcome,.chat-sidebar,.chat-conversation,.chat-composer,.placeholder-page,.focus-completion-modal { border:1px solid var(--theme-border);border-radius:16px; }
+input,textarea,select { background:var(--theme-input)!important;color:var(--theme-text)!important;border-color:var(--theme-border)!important; }
+input::placeholder,textarea::placeholder { color:var(--theme-muted)!important;opacity:.78; }
+button { transition:box-shadow .18s,border-color .18s,transform .18s,background .2s; }
+button:not(:disabled):hover { border-color:var(--theme-accent); }
+.dnd-toggle-active,.available-status,.dnd-status,.timer-status,.focus-progress-fill,.tip-progress span { color:var(--theme-accent)!important; }
+.chat-bubble-mine { background:var(--theme-accent)!important;color:var(--theme-button-text,#fff)!important; }
+.chat-message-time,.chat-date-divider,.local-chat-note,.app-footer,.sidebar-tip small { color:var(--theme-muted)!important; }
+.app-footer { border-color:var(--theme-border)!important; }
+.profile-avatar,.topbar-avatar { overflow:hidden; }
+html[data-theme^="dark-"] .profile-settings-panel,html[data-theme^="dark-"] .profile-hero-card { box-shadow:0 20px 80px var(--theme-shadow),inset 0 1px 0 rgba(255,255,255,.08); }
+html[data-theme="dark-purple"] .profile-settings-button,html[data-theme="dark-purple"] .profile-theme-option.selected { box-shadow:0 0 0 2px var(--theme-glow),0 0 30px rgba(57,231,255,.15); }
+html[data-theme="dark-blood"] .brand-icon,html[data-theme="dark-blood"] .nav-active { box-shadow:0 0 22px rgba(255,35,78,.32); }
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important; } }
+
+
+/* COMPLETE APP-WIDE THEME LAYER — overrides legacy hard-coded component colours. */
+:root { color-scheme: light; }
+html[data-theme^="dark-"] { color-scheme: dark; }
+html[data-theme] body,
+html[data-theme] #root { background:var(--theme-bg)!important; color:var(--theme-text)!important; }
+html[data-theme] .app-shell,
+html[data-theme] .main-panel,
+html[data-theme] .page-content,
+html[data-theme] .page-content > section,
+html[data-theme] .timer-layout,
+html[data-theme] .chat-page-layout,
+html[data-theme] .chat-page-main { background:transparent!important; color:var(--theme-text)!important; }
+html[data-theme] .sidebar,
+html[data-theme] .topbar,
+html[data-theme] .sidebar-bottom,
+html[data-theme] .sidebar-tip,
+html[data-theme] .sidebar-profile,
+html[data-theme] .nav-item,
+html[data-theme] .search-box,
+html[data-theme] .notification-button,
+html[data-theme] .topbar-avatar,
+html[data-theme] .dnd-toggle,
+html[data-theme] .stat-card,
+html[data-theme] .dashboard-card,
+html[data-theme] .next-step-card,
+html[data-theme] .quote-card,
+html[data-theme] .timer-card,
+html[data-theme] .timer-settings-card,
+html[data-theme] .timer-display-card,
+html[data-theme] .timer-summary-card,
+html[data-theme] .friends-summary-card,
+html[data-theme] .friend-row,
+html[data-theme] .friends-panel,
+html[data-theme] .friends-directory,
+html[data-theme] .friends-tabs,
+html[data-theme] .chat-page-welcome,
+html[data-theme] .chat-window,
+html[data-theme] .chat-sidebar-list,
+html[data-theme] .chat-study-banner,
+html[data-theme] .chat-composer,
+html[data-theme] .chat-sidebar-friend,
+html[data-theme] .chat-bubble:not(.chat-bubble-mine),
+html[data-theme] .focus-completion-modal,
+html[data-theme] .glass-card,
+html[data-theme] .profile-hero-card,
+html[data-theme] .profile-settings-panel,
+html[data-theme] .profile-theme-option,
+html[data-theme] .profile-info-card,
+html[data-theme] .profile-form-card,
+html[data-theme] .study-groups-page,
+html[data-theme] .study-group-card,
+html[data-theme] .goal-card,
+html[data-theme] .leaderboard-card,
+html[data-theme] .placeholder-page {
+  background:var(--theme-card)!important;
+  color:var(--theme-text)!important;
+  border-color:var(--theme-border)!important;
+  box-shadow:0 12px 38px var(--theme-shadow),inset 0 1px 0 rgba(255,255,255,.035);
+}
+html[data-theme] .hero-banner {
+  background:linear-gradient(125deg,var(--theme-panel),var(--theme-bg) 45%,var(--theme-glass))!important;
+  color:var(--theme-text)!important;
+  border:1px solid var(--theme-border)!important;
+  box-shadow:0 18px 55px var(--theme-shadow),inset 0 1px 0 rgba(255,255,255,.06)!important;
+}
+html[data-theme] .hero-banner h1,
+html[data-theme] .hero-banner h2,
+html[data-theme] .hero-banner p,
+html[data-theme] .hero-banner .hero-tag,
+html[data-theme] .hero-banner .hero-content,
+html[data-theme] .hero-banner .floating-card,
+html[data-theme] .hero-banner .floating-card strong,
+html[data-theme] .hero-banner .floating-card small { color:var(--theme-text)!important; }
+html[data-theme] .hero-banner .hero-button,
+html[data-theme] .hero-banner .floating-card,
+html[data-theme] .floating-card,
+html[data-theme] .overview-chip,
+html[data-theme] .date-chip,
+html[data-theme] .chat-page-status,
+html[data-theme] .chat-empty-icon,
+html[data-theme] .stat-icon,
+html[data-theme] .summary-icon,
+html[data-theme] .next-step-icon,
+html[data-theme] .timer-settings-icon,
+html[data-theme] .friends-summary-icon,
+html[data-theme] .invite-banner-icon {
+  background:var(--theme-soft)!important;color:var(--theme-accent)!important;border-color:var(--theme-border)!important;
+}
+html[data-theme] h1,html[data-theme] h2,html[data-theme] h3,html[data-theme] h4,
+html[data-theme] strong,html[data-theme] label,html[data-theme] .stat-number,
+html[data-theme] .stat-value,html[data-theme] .timer-digits,
+html[data-theme] .breadcrumb strong,html[data-theme] .brand-name,
+html[data-theme] .profile-info strong,html[data-theme] .chat-header-info strong,
+html[data-theme] .chat-sidebar-friend-info strong { color:var(--theme-text)!important; }
+html[data-theme] p,html[data-theme] small,html[data-theme] .sidebar-label,
+html[data-theme] .breadcrumb span,html[data-theme] .stat-caption,
+html[data-theme] .stat-label,html[data-theme] .stat-bottom,
+html[data-theme] .timer-subtitle,html[data-theme] .timer-session-label,
+html[data-theme] .app-footer,html[data-theme] .profile-info span,
+html[data-theme] .chat-message-time,html[data-theme] .local-chat-note { color:var(--theme-muted)!important; }
+html[data-theme] input,html[data-theme] textarea,html[data-theme] select,
+html[data-theme] .search-box input,html[data-theme] .chat-composer input {
+  background:var(--theme-input)!important;color:var(--theme-text)!important;
+  border-color:var(--theme-border)!important;caret-color:var(--theme-accent)!important;
+}
+html[data-theme] input::placeholder,html[data-theme] textarea::placeholder { color:var(--theme-muted)!important; }
+html[data-theme] button:not(:disabled):hover,
+html[data-theme] a:hover,
+html[data-theme] .profile-theme-option:hover,
+html[data-theme] .nav-item:hover,
+html[data-theme] .next-step-card:hover,
+html[data-theme] .stat-card:hover,
+html[data-theme] .friend-row:hover,
+html[data-theme] .study-group-card:hover,
+html[data-theme] .goal-card:hover,
+html[data-theme] .leaderboard-card:hover {
+  border-color:var(--theme-accent)!important;
+  box-shadow:0 0 0 2px var(--theme-glow),0 12px 38px var(--theme-shadow)!important;
+}
+html[data-theme] .nav-active,
+html[data-theme] .active-indicator,
+html[data-theme] .brand-icon,
+html[data-theme] .hero-button,
+html[data-theme] .timer-start-button,
+html[data-theme] .timer-primary-button,
+html[data-theme] .focus-completion-save,
+html[data-theme] .profile-primary-button,
+html[data-theme] .accept-request-button,
+html[data-theme] .apply-timer-button,
+html[data-theme] .chat-composer button {
+  background:var(--theme-accent)!important;color:var(--theme-button-text,#fff)!important;border-color:var(--theme-accent)!important;
+}
+html[data-theme] .chat-bubble-mine { background:var(--theme-accent)!important;color:var(--theme-button-text,#fff)!important; }
+html[data-theme] .online-dot,html[data-theme] .available-dot,html[data-theme] .profile-status { background:var(--theme-accent)!important; }
+html[data-theme] .footer-dot { color:var(--theme-accent)!important; }
+html[data-theme^="dark-"] .hero-art,
+html[data-theme^="dark-"] .hero-glow { opacity:.25; }
+html[data-theme="dark-blood"] .hero-banner { background:radial-gradient(ellipse at 80% 15%,rgba(255,35,78,.2),transparent 45%),linear-gradient(125deg,#190711,#08070b 65%,#210813)!important; }
+html[data-theme="dark-green"] .hero-banner { background:radial-gradient(ellipse at 85% 10%,rgba(106,240,174,.16),transparent 44%),linear-gradient(125deg,#0d3222,#06120d 65%,#102e21)!important; }
+html[data-theme="dark-purple"] .hero-banner { background:radial-gradient(ellipse at 80% 15%,rgba(57,231,255,.15),transparent 42%),linear-gradient(125deg,#311251,#0a0614 62%,#17102d)!important; }
+html[data-theme="dark-orange"] .hero-banner { background:radial-gradient(ellipse at 80% 15%,rgba(255,133,27,.17),transparent 42%),linear-gradient(125deg,#3f1d08,#090909 62%,#211207)!important; }
+html[data-theme="dark-yellow"] .hero-banner { background:radial-gradient(ellipse at 80% 15%,rgba(245,220,53,.14),transparent 42%),linear-gradient(125deg,#37310a,#0b0b07 62%,#1b1908)!important; }
+html[data-theme^="light-"] .hero-banner { background:linear-gradient(125deg,var(--theme-panel),var(--theme-card-solid),var(--theme-soft))!important; }
+html[data-theme] .focus-completion-overlay { background:rgba(4,5,8,.72)!important; backdrop-filter:blur(12px); }
+html[data-theme] .focus-completion-modal { background:var(--theme-panel)!important;color:var(--theme-text)!important; }
+html[data-theme] .app-footer { border-color:var(--theme-border)!important; }
+html[data-theme] .sidebar-tip { display:none!important; }
+html[data-theme] .sidebar-profile { margin-top:auto!important; }
+html[data-theme] .sidebar-bottom { gap:10px!important; }
+html[data-theme] .profile-theme-option.selected { border-color:var(--theme-accent)!important;box-shadow:0 0 0 2px var(--theme-glow),0 0 26px var(--theme-shadow)!important; }
+
+/* Blood Moon: remove leftover white surfaces throughout the Focus Timer */
+html[data-theme="dark-blood"] .timer-page,
+html[data-theme="dark-blood"] .focus-timer-page,
+html[data-theme="dark-blood"] .timer-layout,
+html[data-theme="dark-blood"] .timer-card,
+html[data-theme="dark-blood"] .timer-display-card,
+html[data-theme="dark-blood"] .timer-settings-card,
+html[data-theme="dark-blood"] .timer-summary-card,
+html[data-theme="dark-blood"] .timer-settings,
+html[data-theme="dark-blood"] .timer-presets,
+html[data-theme="dark-blood"] .timer-mode,
+html[data-theme="dark-blood"] .timer-mode-button,
+html[data-theme="dark-blood"] .timer-preset,
+html[data-theme="dark-blood"] .timer-preset-button,
+html[data-theme="dark-blood"] .timer-control-card,
+html[data-theme="dark-blood"] .timer-option,
+html[data-theme="dark-blood"] .timer-option-card,
+html[data-theme="dark-blood"] .timer-stat,
+html[data-theme="dark-blood"] .timer-stat-card,
+html[data-theme="dark-blood"] .timer-input-group,
+html[data-theme="dark-blood"] .timer-setting-row {
+  background:linear-gradient(145deg,rgba(30,10,18,.96),rgba(12,8,13,.98))!important;
+  color:var(--theme-text)!important;
+  border-color:var(--theme-border)!important;
+  box-shadow:0 10px 32px rgba(255,0,48,.10),inset 0 1px 0 rgba(255,90,120,.04)!important;
+}
+html[data-theme="dark-blood"] .timer-card *,
+html[data-theme="dark-blood"] .timer-display-card *,
+html[data-theme="dark-blood"] .timer-settings-card *,
+html[data-theme="dark-blood"] .timer-summary-card *,
+html[data-theme="dark-blood"] .timer-settings *,
+html[data-theme="dark-blood"] .timer-presets *,
+html[data-theme="dark-blood"] .timer-mode *,
+html[data-theme="dark-blood"] .timer-control-card *,
+html[data-theme="dark-blood"] .timer-option-card * {
+  border-color:var(--theme-border);
+}
+html[data-theme="dark-blood"] .timer-card p,
+html[data-theme="dark-blood"] .timer-display-card p,
+html[data-theme="dark-blood"] .timer-settings-card p,
+html[data-theme="dark-blood"] .timer-summary-card p,
+html[data-theme="dark-blood"] .timer-card span,
+html[data-theme="dark-blood"] .timer-display-card span,
+html[data-theme="dark-blood"] .timer-settings-card span,
+html[data-theme="dark-blood"] .timer-summary-card span {
+  color:var(--theme-muted)!important;
+}
+html[data-theme="dark-blood"] .timer-card button,
+html[data-theme="dark-blood"] .timer-display-card button,
+html[data-theme="dark-blood"] .timer-settings-card button,
+html[data-theme="dark-blood"] .timer-mode-button,
+html[data-theme="dark-blood"] .timer-preset,
+html[data-theme="dark-blood"] .timer-preset-button {
+  background:rgba(255,35,78,.09)!important;
+  color:var(--theme-text)!important;
+  border-color:var(--theme-border)!important;
+}
+html[data-theme="dark-blood"] .timer-card button:hover,
+html[data-theme="dark-blood"] .timer-display-card button:hover,
+html[data-theme="dark-blood"] .timer-settings-card button:hover,
+html[data-theme="dark-blood"] .timer-mode-button:hover,
+html[data-theme="dark-blood"] .timer-preset:hover,
+html[data-theme="dark-blood"] .timer-preset-button:hover,
+html[data-theme="dark-blood"] .timer-mode-button.active,
+html[data-theme="dark-blood"] .timer-preset.selected,
+html[data-theme="dark-blood"] .timer-preset-button.selected {
+  background:var(--theme-accent)!important;
+  color:#fff!important;
+  border-color:var(--theme-accent)!important;
+  box-shadow:0 0 18px rgba(255,35,78,.28)!important;
+}
+html[data-theme="dark-blood"] .timer-card svg,
+html[data-theme="dark-blood"] .timer-display-card svg,
+html[data-theme="dark-blood"] .timer-settings-card svg { color:var(--theme-accent); }
+
+/* BLOOD MOON — final override: no legacy green accents or white surfaces.
+   Keep the palette driven by theme tokens so the Blood Moon primary is blood red. */
+html[data-theme="dark-blood"] {
+  --theme-bg:#080509;
+  --theme-panel:#10080e;
+  --theme-card:linear-gradient(145deg,rgba(35,8,18,.96),rgba(12,7,12,.96));
+  --theme-card-solid:#10080e;
+  --theme-glass:rgba(24,7,14,.88);
+  --theme-text:#fff0f3;
+  --theme-muted:#c09aa5;
+  --theme-accent:#ff234e;
+  --theme-accent-secondary:#8d1230;
+  --theme-soft:rgba(255,35,78,.14);
+  --theme-border:rgba(255,35,78,.34);
+  --theme-glow:rgba(255,35,78,.34);
+  --theme-shadow:rgba(255,0,48,.2);
+  --theme-input:rgba(15,6,12,.96);
+  --theme-button-text:#fff0f3;
+  --theme-danger:#ff6b85;
+  --theme-success:#ff7893;
+  --theme-success-bg:rgba(255,35,78,.13);
+  color-scheme:dark;
+}
+html[data-theme="dark-blood"] body,
+html[data-theme="dark-blood"] .app-shell,
+html[data-theme="dark-blood"] .main-panel,
+html[data-theme="dark-blood"] .page-content {
+  background-color:var(--theme-bg)!important;
+  color:var(--theme-text)!important;
+}
+html[data-theme="dark-blood"] :is(.sidebar,.topbar,.nav-item,.sidebar-profile,.search-box,.notification-button,.topbar-avatar,.dnd-toggle,.dashboard-card,.stat-card,.timer-card,.timer-settings-card,.timer-display-card,.timer-summary-card,.timer-settings,.timer-presets,.timer-mode,.timer-mode-button,.timer-preset,.timer-preset-button,.timer-control-card,.timer-option,.timer-option-card,.timer-stat,.timer-stat-card,.timer-input-group,.timer-setting-row,.friend-row,.friends-panel,.chat-panel,.chat-page-welcome,.chat-sidebar,.chat-conversation,.chat-composer,.placeholder-page,.focus-completion-modal,.study-groups-page,.study-group-card,.goal-card,.leaderboard-card,.modal-card,.profile-hero-card,.profile-settings-panel,.profile-theme-option,.profile-info-card,.profile-field,.profile-section,.settings-card,.settings-panel) {
+  background:var(--theme-card)!important;
+  color:var(--theme-text)!important;
+  border-color:var(--theme-border)!important;
+  box-shadow:0 10px 32px rgba(255,0,48,.09),inset 0 1px 0 rgba(255,90,120,.035)!important;
+}
+html[data-theme="dark-blood"] :is(button,.nav-item,.profile-theme-option,.timer-preset,.timer-preset-button,.timer-mode-button,.dashboard-card[role="button"],.friend-row[role="button"]) {
+  border-color:var(--theme-border)!important;
+}
+html[data-theme="dark-blood"] :is(button,.nav-item,.profile-theme-option,.timer-preset,.timer-preset-button,.timer-mode-button):hover,
+html[data-theme="dark-blood"] :is(.nav-active,.active,.selected,.timer-mode-button.active,.timer-preset.selected,.timer-preset-button.selected,.profile-theme-option.selected) {
+  background:linear-gradient(135deg,rgba(255,35,78,.28),rgba(95,8,31,.5))!important;
+  color:var(--theme-text)!important;
+  border-color:var(--theme-accent)!important;
+  box-shadow:0 0 0 1px rgba(255,35,78,.18),0 0 24px var(--theme-glow)!important;
+}
+html[data-theme="dark-blood"] :is(.brand-icon,.profile-avatar,.friend-avatar,.chat-mini-avatar,.timer-primary-button,.hero-button,.friend-chat-button,.accept-request-button,.focus-completion-save,.chat-composer button,.apply-timer-button,.focus-progress-fill,.tip-progress span) {
+  background:var(--theme-accent)!important;
+  color:var(--theme-button-text)!important;
+  border-color:var(--theme-accent)!important;
+}
+html[data-theme="dark-blood"] :is(.hero-banner,.hero,.welcome-banner,.dashboard-hero) {
+  background:radial-gradient(ellipse at 80% 15%,rgba(255,35,78,.22),transparent 45%),linear-gradient(125deg,#300815,#10070d 62%,#210711)!important;
+  color:var(--theme-text)!important;
+  border-color:var(--theme-border)!important;
+}
+html[data-theme="dark-blood"] :is(input,textarea,select) {
+  background:var(--theme-input)!important;
+  color:var(--theme-text)!important;
+  border-color:var(--theme-border)!important;
+  accent-color:var(--theme-accent);
+}
+html[data-theme="dark-blood"] :is(.success,.success-text,.available-status,.dnd-status,.timer-status,.status-dot,.online-indicator,[data-status="available"]) {
+  color:var(--theme-accent)!important;
+}
+html[data-theme="dark-blood"] :is(.success-bg,.success-badge,.available-badge,.online-badge) {
+  background:rgba(255,35,78,.14)!important;
+  color:var(--theme-text)!important;
+  border-color:var(--theme-border)!important;
+}
+html[data-theme="dark-blood"] :is(.timer-card,.timer-display-card,.timer-settings-card,.timer-summary-card,.timer-settings,.timer-presets,.timer-control-card,.timer-option-card) * {
+  border-color:var(--theme-border);
+}
+html[data-theme="dark-blood"] :is(.timer-card,.timer-display-card,.timer-settings-card,.timer-summary-card,.timer-settings,.timer-presets,.timer-control-card,.timer-option-card) :is(p,small,.muted,.helper-text) {
+  color:var(--theme-muted)!important;
+}
+
+/* BLOOD MOON FINAL COMPONENT PASS: cover legacy component-specific class names
+   that previously kept their white surfaces or green accent colours. */
+html[data-theme="dark-blood"] .page-content,
+html[data-theme="dark-blood"] .page-content section,
+html[data-theme="dark-blood"] .page-content article,
+html[data-theme="dark-blood"] .page-content [class*="-card"],
+html[data-theme="dark-blood"] .page-content [class*="-panel"],
+html[data-theme="dark-blood"] .page-content [class*="-summary"],
+html[data-theme="dark-blood"] .page-content [class*="-empty"],
+html[data-theme="dark-blood"] .page-content [class*="-directory"],
+html[data-theme="dark-blood"] .page-content [class*="-table-wrap"],
+html[data-theme="dark-blood"] .page-content [class*="-overview"],
+html[data-theme="dark-blood"] .page-content [class*="-form-card"],
+html[data-theme="dark-blood"] .page-content [class*="-hero"]:not(.hero-banner),
+html[data-theme="dark-blood"] .page-content [class*="-banner"] {
+  background-color:rgba(18,7,13,.94)!important;
+  color:var(--theme-text)!important;
+  border-color:var(--theme-border)!important;
+}
+html[data-theme="dark-blood"] .page-content .timer-tab,
+html[data-theme="dark-blood"] .page-content .timer-reset-button,
+html[data-theme="dark-blood"] .page-content .timer-start-button,
+html[data-theme="dark-blood"] .page-content .timer-tab-active,
+html[data-theme="dark-blood"] .page-content .friends-tab,
+html[data-theme="dark-blood"] .page-content .friends-tab-active,
+html[data-theme="dark-blood"] .page-content .sg-create-button,
+html[data-theme="dark-blood"] .page-content .sg-join-button,
+html[data-theme="dark-blood"] .page-content .sg-open-button,
+html[data-theme="dark-blood"] .page-content .sg-invite-button,
+html[data-theme="dark-blood"] .page-content .goals-create-button,
+html[data-theme="dark-blood"] .page-content .goals-submit-button,
+html[data-theme="dark-blood"] .page-content .goals-focus-button,
+html[data-theme="dark-blood"] .page-content .leaderboard-primary-button,
+html[data-theme="dark-blood"] .page-content .leaderboard-periods button {
+  background:linear-gradient(135deg,#ff234e,#8d1230)!important;
+  color:#fff0f3!important;
+  border-color:#ff234e!important;
+  box-shadow:0 0 18px rgba(255,35,78,.18)!important;
+}
+html[data-theme="dark-blood"] .page-content .timer-ring .timer-track { stroke:rgba(255,35,78,.16)!important; }
+html[data-theme="dark-blood"] .page-content .timer-ring .timer-progress { stroke:#ff234e!important; }
+html[data-theme="dark-blood"] .page-content .timer-digits,
+html[data-theme="dark-blood"] .page-content .timer-time-content,
+html[data-theme="dark-blood"] .page-content .timer-tab,
+html[data-theme="dark-blood"] .page-content .timer-encouragement,
+html[data-theme="dark-blood"] .page-content .timer-card-heading,
+html[data-theme="dark-blood"] .page-content .timer-settings-card h3,
+html[data-theme="dark-blood"] .page-content .timer-summary-card strong { color:#fff0f3!important; }
+html[data-theme="dark-blood"] .page-content .timer-tab-active,
+html[data-theme="dark-blood"] .page-content .timer-start-button,
+html[data-theme="dark-blood"] .page-content .timer-reset-button,
+html[data-theme="dark-blood"] .page-content .apply-timer-button { background:#ff234e!important;color:#fff!important;border-color:#ff234e!important; }
+html[data-theme="dark-blood"] .page-content .sg-hero,
+html[data-theme="dark-blood"] .page-content .sg-create-intro,
+html[data-theme="dark-blood"] .page-content .sg-directory,
+html[data-theme="dark-blood"] .page-content .sg-card,
+html[data-theme="dark-blood"] .page-content .sg-profile-card,
+html[data-theme="dark-blood"] .page-content .sg-chat-panel,
+html[data-theme="dark-blood"] .page-content .sg-create-form,
+html[data-theme="dark-blood"] .page-content .sg-create-modal,
+html[data-theme="dark-blood"] .page-content .sg-joined-section,
+html[data-theme="dark-blood"] .page-content .sg-empty,
+html[data-theme="dark-blood"] .page-content .goals-summary-strip,
+html[data-theme="dark-blood"] .page-content .goals-form-card,
+html[data-theme="dark-blood"] .page-content .goals-friend-picker,
+html[data-theme="dark-blood"] .page-content .goals-type-options,
+html[data-theme="dark-blood"] .page-content .goals-progress-track,
+html[data-theme="dark-blood"] .page-content .leaderboard-overview,
+html[data-theme="dark-blood"] .page-content .leaderboard-table-card,
+html[data-theme="dark-blood"] .page-content .leaderboard-table-wrap,
+html[data-theme="dark-blood"] .page-content .leaderboard-your-rank,
+html[data-theme="dark-blood"] .page-content .leaderboard-periods {
+  background:linear-gradient(145deg,rgba(35,8,18,.96),rgba(12,7,12,.98))!important;
+  color:var(--theme-text)!important;border-color:var(--theme-border)!important;
+}
+html[data-theme="dark-blood"] .page-content .goals-summary-icon,
+html[data-theme="dark-blood"] .page-content .goals-checkmark,
+html[data-theme="dark-blood"] .page-content .leaderboard-overview-icon,
+html[data-theme="dark-blood"] .page-content .leaderboard-your-rank-icon,
+html[data-theme="dark-blood"] .page-content .sg-card-icon,
+html[data-theme="dark-blood"] .page-content .sg-hero-icon,
+html[data-theme="dark-blood"] .page-content .sg-group-heading-icon,
+html[data-theme="dark-blood"] .page-content .friends-summary-icon,
+html[data-theme="dark-blood"] .page-content .friends-summary-icon * {
+  background:rgba(255,35,78,.14)!important;color:#ff5473!important;border-color:var(--theme-border)!important;
+}
+html[data-theme="dark-blood"] .page-content .goals-title,
+html[data-theme="dark-blood"] .page-content .goals-eyebrow,
+html[data-theme="dark-blood"] .page-content .goals-progress-label,
+html[data-theme="dark-blood"] .page-content .goals-target-line,
+html[data-theme="dark-blood"] .page-content .goals-credit-earned,
+html[data-theme="dark-blood"] .page-content .leaderboard-eyebrow-dot,
+html[data-theme="dark-blood"] .page-content .sg-success,
+html[data-theme="dark-blood"] .page-content .sg-category,
+html[data-theme="dark-blood"] .page-content .sg-owner-pill,
+html[data-theme="dark-blood"] .page-content .sg-joined-icon,
+html[data-theme="dark-blood"] .page-content .friends-online-icon,
+html[data-theme="dark-blood"] .page-content .presence-online,
+html[data-theme="dark-blood"] .page-content .dnd-dot,
+html[data-theme="dark-blood"] .page-content .online-dot,
+html[data-theme="dark-blood"] .page-content .available-dot {
+  color:#ff5473!important;background-color:rgba(255,35,78,.16)!important;border-color:var(--theme-border)!important;
+}
+html[data-theme="dark-blood"] .page-content .goals-progress-track > span,
+html[data-theme="dark-blood"] .page-content .goals-progress-track > div,
+html[data-theme="dark-blood"] .page-content .goals-group-complete,
+html[data-theme="dark-blood"] .page-content .leaderboard-table-avatar,
+html[data-theme="dark-blood"] .page-content .leaderboard-podium-rank,
+html[data-theme="dark-blood"] .page-content .leaderboard-you-tag { background:#ff234e!important;color:#fff!important;border-color:#ff234e!important; }
+html[data-theme="dark-blood"] .page-content .welcome-heading span,
+html[data-theme="dark-blood"] .page-content .dashboard-welcome span,
+html[data-theme="dark-blood"] .page-content .welcome-title span,
+html[data-theme="dark-blood"] .page-content h1 span { color:#ff234e!important; }
+html[data-theme="dark-blood"] .page-content .friend-row,
+html[data-theme="dark-blood"] .page-content .friends-summary-card,
+html[data-theme="dark-blood"] .page-content .friends-directory,
+html[data-theme="dark-blood"] .page-content .friends-tabs,
+html[data-theme="dark-blood"] .page-content .friends-empty,
+html[data-theme="dark-blood"] .page-content .invite-banner,
+html[data-theme="dark-blood"] .page-content .friends-demo-note { background:rgba(18,7,13,.94)!important;color:var(--theme-text)!important;border-color:var(--theme-border)!important; }
+html[data-theme="dark-blood"] .page-content :is(.sg-card,.study-group-card,.goal-card,.leaderboard-card,.friend-row,.friends-summary-card,.timer-card,.timer-settings-card,.timer-display-card,.timer-summary-card) * { border-color:var(--theme-border); }
+html[data-theme="dark-blood"] .page-content :is(.sg-card,.study-group-card,.goal-card,.leaderboard-card,.friend-row,.friends-summary-card,.timer-card,.timer-settings-card,.timer-display-card,.timer-summary-card) :is(p,small,span,label) { color:var(--theme-muted); }
+html[data-theme="dark-blood"] .page-content :is(.sg-card,.study-group-card,.goal-card,.leaderboard-card,.friend-row,.friends-summary-card,.timer-card,.timer-settings-card,.timer-display-card,.timer-summary-card) :is(h1,h2,h3,h4,strong,b,.timer-digits,.stat-value,.leaderboard-person-name) { color:var(--theme-text)!important; }
+html[data-theme="dark-blood"] .page-content :is(button,a,[role="button"],input,textarea,select) { accent-color:#ff234e; }
+
+/* SINGLE THEME: BLOOD MOON — vivid red gradient + obsidian black. */
+html[data-theme], html[data-theme="dark-blood"] {
+  color-scheme: dark;
+  --theme-bg: #050407;
+  --theme-panel: #0b080d;
+  --theme-card: linear-gradient(135deg, rgba(34, 5, 15, .98) 0%, rgba(13, 8, 14, .97) 48%, rgba(42, 3, 17, .96) 100%);
+  --theme-card-solid: #0d080e;
+  --theme-glass: linear-gradient(135deg, rgba(37, 6, 17, .88), rgba(9, 7, 12, .94) 58%, rgba(35, 3, 15, .9));
+  --theme-text: #fff2f5;
+  --theme-muted: #c49aa5;
+  --theme-accent: #ff123f;
+  --theme-accent-secondary: #a5002b;
+  --theme-soft: rgba(255, 18, 63, .2);
+  --theme-border: rgba(255, 28, 68, .38);
+  --theme-glow: rgba(255, 0, 55, .42);
+  --theme-shadow: rgba(255, 0, 45, .22);
+  --theme-input: rgba(8, 5, 10, .96);
+  --theme-button-text: #fff;
+  --theme-danger: #ff667f;
+  --theme-success: #ff315a;
+  --theme-success-bg: rgba(255, 18, 63, .16);
+}
+html[data-theme] body,
+html[data-theme] #root { background: #050407 !important; color: #fff2f5 !important; }
+html[data-theme] body::before { z-index: 0; background: radial-gradient(ellipse at 15% 0%, rgba(255, 0, 52, .19), transparent 43%), radial-gradient(ellipse at 90% 95%, rgba(130, 0, 35, .2), transparent 42%) !important; }
+html[data-theme] .app-shell,
+html[data-theme] .main-panel,
+html[data-theme] .page-content { background: transparent !important; }
+html[data-theme] .sidebar,
+html[data-theme] .topbar,
+html[data-theme] .sidebar-bottom,
+html[data-theme] .sidebar-tip,
+html[data-theme] .sidebar-profile,
+html[data-theme] .nav-item:not(.nav-active),
+html[data-theme] .dashboard-card,
+html[data-theme] .stat-card,
+html[data-theme] .next-step-card,
+html[data-theme] .quote-card,
+html[data-theme] .timer-card,
+html[data-theme] .timer-settings-card,
+html[data-theme] .timer-display-card,
+html[data-theme] .timer-summary-card,
+html[data-theme] .friend-row,
+html[data-theme] .friends-summary-card,
+html[data-theme] .friends-directory,
+html[data-theme] .friends-tabs,
+html[data-theme] .friends-panel,
+html[data-theme] .chat-panel,
+html[data-theme] .chat-window,
+html[data-theme] .chat-sidebar,
+html[data-theme] .chat-conversation,
+html[data-theme] .chat-composer,
+html[data-theme] .study-group-card,
+html[data-theme] .sg-card,
+html[data-theme] .goal-card,
+html[data-theme] .leaderboard-card,
+html[data-theme] .profile-card,
+html[data-theme] .profile-settings-panel,
+html[data-theme] .profile-edit-form,
+html[data-theme] .modal-card { background: var(--theme-glass) !important; color: var(--theme-text) !important; border-color: var(--theme-border) !important; box-shadow: inset 0 1px 0 rgba(255, 120, 145, .06), 0 12px 36px rgba(0,0,0,.22); }
+html[data-theme] .nav-active,
+html[data-theme] .timer-primary-button,
+html[data-theme] .hero-button,
+html[data-theme] .friend-chat-button,
+html[data-theme] .accept-request-button,
+html[data-theme] .focus-completion-save,
+html[data-theme] .chat-composer button,
+html[data-theme] .apply-timer-button,
+html[data-theme] .profile-primary-button,
+html[data-theme] .profile-switch.active,
+html[data-theme] .focus-progress-fill,
+html[data-theme] .goals-progress-track > div,
+html[data-theme] .goals-group-complete,
+html[data-theme] .leaderboard-table-avatar,
+html[data-theme] .leaderboard-podium-rank,
+html[data-theme] .leaderboard-you-tag { background: linear-gradient(135deg, #ff1744 0%, #d90032 48%, #85001f 100%) !important; color: #fff !important; border-color: #ff1744 !important; box-shadow: 0 0 22px rgba(255, 0, 55, .22); }
+html[data-theme] .page-content h1 span,
+html[data-theme] .page-content h2 span,
+html[data-theme] .welcome-heading span,
+html[data-theme] .dashboard-welcome span,
+html[data-theme] .welcome-title span,
+html[data-theme] .timer-digits,
+html[data-theme] .timer-value,
+html[data-theme] .profile-theme-name { color: #ff244e !important; }
+html[data-theme] button:not(:disabled):hover,
+html[data-theme] a:hover,
+html[data-theme] [role="button"]:hover { border-color: #ff1744 !important; box-shadow: 0 0 0 2px rgba(255, 23, 68, .22), 0 0 28px rgba(255, 0, 55, .18) !important; }
+html[data-theme] input,
+html[data-theme] textarea,
+html[data-theme] select { background: rgba(7, 5, 9, .98) !important; color: #fff2f5 !important; border-color: rgba(255, 28, 68, .4) !important; }
+html[data-theme] .blood-moon-swatch,
+html[data-theme] .blood-moon-theme-swatch { display: inline-block; width: 38px; height: 38px; flex: 0 0 38px; border-radius: 12px; background: linear-gradient(135deg, #ff1744, #b3002b 48%, #09070b 100%); border: 1px solid rgba(255, 40, 80, .7); box-shadow: 0 0 22px rgba(255, 0, 55, .28); }
+html[data-theme] .blood-moon-fixed-theme { cursor: default; }
+
+/* Blood Moon refinement: presence stays green for clear availability semantics. */
+html[data-theme] :is(.online-dot,.available-dot,.profile-status,.online-indicator,.presence-online,[data-status="online"],[data-status="available"],.available-status,.online-status) {
+  background-color: #22c55e !important;
+  color: #4ade80 !important;
+  border-color: rgba(34,197,94,.65) !important;
+}
+html[data-theme] :is(.online-text,.available-text,.status-online-text,.presence-label-online) {
+  color: #4ade80 !important;
+}
+html[data-theme] :is(.search-box,.search-input-wrapper,.search-field,.friends-search,.group-search,.leaderboard-search) {
+  background: linear-gradient(135deg, rgba(44,0,12,.96), rgba(15,7,12,.98)) !important;
+  color: #fff2f5 !important;
+  border-color: rgba(255,23,68,.62) !important;
+  box-shadow: inset 0 1px 0 rgba(255,70,100,.08), 0 0 16px rgba(255,0,55,.08) !important;
+}
+html[data-theme] :is(.search-box,.search-input-wrapper,.search-field,.friends-search,.group-search,.leaderboard-search) input,
+html[data-theme] input[placeholder*="Search" i],
+html[data-theme] input[aria-label*="Search" i] {
+  background: transparent !important;
+  color: #fff2f5 !important;
+  caret-color: #ff1744 !important;
+  border-color: rgba(255,23,68,.5) !important;
+}
+html[data-theme] :is(.search-box,.search-input-wrapper,.search-field,.friends-search,.group-search,.leaderboard-search):focus-within {
+  border-color: #ff1744 !important;
+  box-shadow: 0 0 0 3px rgba(255,23,68,.18), 0 0 24px rgba(255,0,55,.18) !important;
+}
+html[data-theme] input::placeholder, html[data-theme] textarea::placeholder { color: rgba(255,210,220,.55) !important; }
+
+/* Goals page: align the "PLAN YOUR PROGRESS / Study Goals" header and every goal component with Blood Moon. */
+html[data-theme] .goals-page,
+html[data-theme] .goals-container,
+html[data-theme] .goals-content { background: transparent !important; color: #fff2f5 !important; }
+html[data-theme] .goals-eyebrow { color: #ff8ba2 !important; }
+html[data-theme] .goals-eyebrow > span { background: linear-gradient(90deg,#ff1744,#9e0028) !important; box-shadow: 0 0 12px rgba(255,23,68,.45); }
+html[data-theme] .goals-title { color: #fff2f5 !important; }
+html[data-theme] .goals-title > span { color: #ff244e !important; }
+html[data-theme] .goals-subtitle { color: #c8aab3 !important; }
+html[data-theme] :is(.goals-summary-strip,.goals-form-card,.goals-card,.goals-empty,.goals-loading,.goals-friend-picker,.goals-type-options > button,.goals-friend-option,.goals-close-form,.goals-cancel-button,.goals-refresh-button,.goals-focus-button) {
+  background: linear-gradient(145deg,rgba(35,8,18,.94),rgba(10,7,12,.97)) !important;
+  color: #fff2f5 !important;
+  border-color: rgba(255,35,78,.25) !important;
+  box-shadow: inset 0 1px 0 rgba(255,120,145,.045), 0 12px 32px rgba(0,0,0,.2) !important;
+  backdrop-filter: blur(20px);
+}
+html[data-theme] .goals-summary-icon,
+html[data-theme] .goals-empty-icon,
+html[data-theme] .goals-friend-avatar { background: rgba(255,23,68,.15) !important; color: #ff5473 !important; }
+html[data-theme] :is(.goals-summary-strip,.goals-form-card,.goals-card,.goals-empty,.goals-loading) :is(h2,h3,strong) { color: #fff2f5 !important; }
+html[data-theme] :is(.goals-form-heading p,.goals-list-heading p,.goals-summary-strip > div:nth-child(2) > span,.goals-field label,.goals-field-label,.goals-progress-label,.goals-target-line,.goals-members-heading,.goals-member-progress-label span,.goals-empty p,.goals-no-friends,.goals-friend-name small) { color: #c8aab3 !important; }
+html[data-theme] .goals-create-button,
+html[data-theme] .goals-submit-button,
+html[data-theme] .goals-focus-button,
+html[data-theme] .goals-text-button { background: linear-gradient(135deg,#ff1744,#b3002b 60%,#79001d) !important; color: #fff !important; border-color: rgba(255,35,78,.72) !important; }
+html[data-theme] .goals-kind-pill { background: rgba(255,35,78,.12) !important; color: #ff9caf !important; }
+html[data-theme] .goals-kind-pill > span { background: #ff345e !important; }
+html[data-theme] .goals-kind-pill.group { background: rgba(255,35,78,.12) !important; color: #ff9caf !important; }
+html[data-theme] .goals-kind-pill.group > span { background: #ff345e !important; }
+html[data-theme] .goals-completed-pill { background: rgba(255,35,78,.16) !important; color: #ff8ba2 !important; border: 1px solid rgba(255,35,78,.35) !important; }
+html[data-theme] .goals-progress-track { background: rgba(255,255,255,.09) !important; }
+html[data-theme] .goals-progress-track > span { background: linear-gradient(90deg,#ff5473,#ff1744,#8d0024) !important; }
+html[data-theme] .goals-card-complete { background: linear-gradient(145deg,rgba(48,8,22,.96),rgba(12,7,12,.98)) !important; border-color: rgba(255,35,78,.42) !important; }
+html[data-theme] .goals-target-line svg,
+html[data-theme] .goals-credit-earned,
+html[data-theme] .goals-group-complete,
+html[data-theme] .goals-checkmark { color: #ff5473 !important; }
+html[data-theme] .goals-credit-pending { color: #c8aab3 !important; }
+html[data-theme] .goals-members-progress { border-color: rgba(255,35,78,.2) !important; }
+html[data-theme] .goals-field input,
+html[data-theme] .goals-field select,
+html[data-theme] .goals-completion-form input,
+html[data-theme] .goals-completion-form textarea { background: rgba(7,5,9,.98) !important; color: #fff2f5 !important; border-color: rgba(255,35,78,.4) !important; }
+html[data-theme] .goals-type-options > button.selected,
+html[data-theme] .goals-friend-option.selected { background: rgba(255,23,68,.13) !important; border-color: rgba(255,35,78,.75) !important; color: #fff2f5 !important; }
+html[data-theme] .goals-type-options strong,
+html[data-theme] .goals-friend-name strong { color: #fff2f5 !important; }
+html[data-theme] .goals-form-footnote { background: rgba(255,35,78,.09) !important; color: #d7b9c1 !important; }
+html[data-theme] .goals-form-footnote :is(svg,strong) { color: #ff5473 !important; }
+html[data-theme] .goals-alert-success { background: rgba(255,35,78,.12) !important; color: #ff9caf !important; border-color: rgba(255,35,78,.3) !important; }
+html[data-theme] .goals-progress-label strong,
+html[data-theme] .goals-members-heading strong,
+html[data-theme] .goals-member-progress-label strong { color: #fff2f5 !important; }
+
+
+/* Standard FOCENTRA dark mode: no selectable themes, no light appearance, no Blood Moon styling. */
+:root { color-scheme: dark; }
+html[data-theme], html[data-theme="dark"] {
+  color-scheme: dark;
+  --theme-bg: #0b0d12;
+  --theme-panel: #11151d;
+  --theme-card: linear-gradient(135deg, rgba(27,32,43,.96), rgba(16,19,27,.96));
+  --theme-card-solid: #171b24;
+  --theme-glass: rgba(22,27,37,.86);
+  --theme-text: #edf0f6;
+  --theme-muted: #9ba5b5;
+  --theme-accent: #55c98a;
+  --theme-accent-secondary: #26764c;
+  --theme-soft: rgba(85,201,138,.12);
+  --theme-border: rgba(148,163,184,.18);
+  --theme-glow: rgba(85,201,138,.16);
+  --theme-shadow: rgba(0,0,0,.28);
+  --theme-input: #10141c;
+  --theme-button-text: #07130c;
+  --theme-danger: #ff7b8f;
+  --theme-success: #55c98a;
+  --theme-success-bg: rgba(85,201,138,.12);
+}
+html[data-theme] body, html[data-theme] #root { background: #0b0d12 !important; color: #edf0f6 !important; }
+html[data-theme] body::before { background: radial-gradient(ellipse at 12% 0%, rgba(85,201,138,.07), transparent 42%), radial-gradient(ellipse at 92% 88%, rgba(96,112,145,.07), transparent 38%) !important; }
+html[data-theme] body::after { content: none !important; display: none !important; }
+html[data-theme] :is(.brand-icon,.nav-active,.profile-avatar,.friend-avatar,.chat-mini-avatar,.timer-primary-button,.hero-button,.friend-chat-button,.accept-request-button,.focus-completion-save,.chat-composer button,.apply-timer-button,.profile-primary-button) { background: #55c98a !important; color: #07130c !important; }
+html[data-theme] :is(.nav-item:hover,.nav-item:focus-visible,.dashboard-card:hover,.stat-card:hover,.friend-row:hover,.notification-button:hover,.topbar-avatar:hover,.search-box:focus-within,.chat-composer:focus-within,[role="button"]:hover) { border-color: rgba(85,201,138,.65) !important; box-shadow: 0 0 0 2px rgba(85,201,138,.12), 0 8px 24px rgba(0,0,0,.2) !important; }
+html[data-theme] :is(.profile-page-heading h1 span,.profile-eyebrow,.profile-page-heading .profile-eyebrow,.goals-eyebrow,.goals-title > span,.profile-setting-icon,.profile-member-pill,.profile-verified-dot) { color: #55c98a !important; }
+html[data-theme] :is(.search-box,.search-input-wrapper,.search-field,.friends-search,.group-search,.leaderboard-search) { background: #10141c !important; color: #edf0f6 !important; border-color: rgba(148,163,184,.22) !important; box-shadow: none !important; }
+html[data-theme] :is(.search-box,.search-input-wrapper,.search-field,.friends-search,.group-search,.leaderboard-search) input, html[data-theme] input[placeholder*="Search" i], html[data-theme] input[aria-label*="Search" i] { background: transparent !important; color: #edf0f6 !important; caret-color: #55c98a !important; border-color: transparent !important; }
+html[data-theme] :is(.search-box,.search-input-wrapper,.search-field,.friends-search,.group-search,.leaderboard-search):focus-within { border-color: #55c98a !important; box-shadow: 0 0 0 3px rgba(85,201,138,.12) !important; }
+html[data-theme] :is(.goals-eyebrow > span,.goals-progress-track > span) { background: linear-gradient(90deg,#55c98a,#26764c) !important; box-shadow: none !important; }
+html[data-theme] :is(.goals-text-button,.goals-form-submit,.goals-primary-button) { background: #55c98a !important; color: #07130c !important; border-color: transparent !important; }
+html[data-theme] :is(.goals-kind-pill,.goals-kind-pill.group,.goals-completed-pill) { background: rgba(85,201,138,.1) !important; color: #8be3b1 !important; border-color: rgba(85,201,138,.24) !important; }
+html[data-theme] :is(.goals-kind-pill > span,.goals-kind-pill.group > span) { background: #55c98a !important; }
+html[data-theme] :is(.profile-theme-name,.goals-title > span) { color: #55c98a !important; }
+html[data-theme] .blood-moon-swatch, html[data-theme] .blood-moon-theme-swatch { display: none !important; }
+.dark-mode-status { flex: 0 0 auto; padding: 5px 8px; border-radius: 7px; color: #8be3b1; background: rgba(85,201,138,.12); border: 1px solid rgba(85,201,138,.24); font-size: 10px; font-weight: 850; letter-spacing: .08em; }
+
+
+/* Study Groups — align the community banner, directory and group chat with FOCENTRA standard dark mode. */
+html[data-theme] .study-groups-page { color: #edf0f6 !important; background: transparent !important; }
+html[data-theme] .study-groups-page .page-heading h1,
+html[data-theme] .study-groups-page .sg-hero h2,
+html[data-theme] .study-groups-page .sg-directory-heading h2,
+html[data-theme] .study-groups-page .sg-joined-section h2,
+html[data-theme] .study-groups-page .sg-card h3,
+html[data-theme] .study-groups-page .sg-group-heading-copy h1 { color: #edf0f6 !important; }
+html[data-theme] .study-groups-page .page-heading h1 span { color: #55c98a !important; }
+html[data-theme] .study-groups-page :is(.page-eyebrow,.sg-hero > div:nth-child(2) > span,.sg-group-heading-copy > span) { color: #72d9a0 !important; }
+html[data-theme] .study-groups-page :is(.page-heading p,.sg-hero p,.sg-hero-stat span,.sg-directory-heading p,.sg-card > p,.sg-card-bottom > span,.sg-group-heading-copy p,.sg-chat-topline span,.sg-message-meta time,.sg-joined-list small) { color: #9ba5b5 !important; }
+html[data-theme] .study-groups-page :is(.sg-hero,.sg-card,.sg-chat-panel,.sg-profile-card,.sg-empty,.sg-loading,.sg-joined-list button) {
+  background: linear-gradient(145deg, rgba(27,32,43,.97), rgba(16,19,27,.98)) !important;
+  color: #edf0f6 !important;
+  border-color: rgba(148,163,184,.2) !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.025) !important;
+}
+html[data-theme] .study-groups-page :is(.sg-hero-icon,.sg-card-icon,.sg-joined-icon,.sg-group-heading-icon,.sg-message-avatar,.sg-profile-avatar) { background: rgba(85,201,138,.12) !important; color: #72d9a0 !important; }
+html[data-theme] .study-groups-page .sg-hero-stat { border-left-color: rgba(148,163,184,.2) !important; }
+html[data-theme] .study-groups-page .sg-category { background: rgba(148,163,184,.1) !important; color: #b4bdca !important; }
+html[data-theme] .study-groups-page :is(.sg-search,.sg-composer,.sg-chat-topline) { background: #10141c !important; border-color: rgba(148,163,184,.2) !important; color: #9ba5b5 !important; }
+html[data-theme] .study-groups-page :is(.sg-search input,.sg-composer input) { background: transparent !important; color: #edf0f6 !important; border-color: transparent !important; }
+html[data-theme] .study-groups-page :is(.sg-join-button,.sg-profile-done,.sg-composer button,.sg-create-button) { background: #55c98a !important; color: #07130c !important; border-color: #55c98a !important; }
+html[data-theme] .study-groups-page :is(.sg-open-button,.sg-public-pill,.sg-message-mine .sg-message-body > p) { background: rgba(85,201,138,.12) !important; color: #8be3b1 !important; border-color: rgba(85,201,138,.22) !important; }
+html[data-theme] .study-groups-page .sg-message-body > p { background: rgba(148,163,184,.1) !important; color: #edf0f6 !important; }
+html[data-theme] .study-groups-page .sg-message-mine .sg-message-body > p { background: rgba(85,201,138,.15) !important; color: #e9fff2 !important; }
+html[data-theme] .study-groups-page .sg-card-bottom { border-top-color: rgba(148,163,184,.16) !important; }
+html[data-theme] .study-groups-page :is(.sg-error,.sg-delete-button,.sg-leave-button) { background: rgba(255,123,143,.1) !important; color: #ff9cab !important; border-color: rgba(255,123,143,.25) !important; }
+html[data-theme] .study-groups-page .sg-profile-detail { background: rgba(148,163,184,.09) !important; color: #edf0f6 !important; }
+html[data-theme] .study-groups-page .sg-modal-backdrop { background: rgba(0,0,0,.68) !important; backdrop-filter: blur(8px); }
+html[data-theme] .study-groups-page :is(.sg-card,.sg-joined-list button,.sg-search):focus-within,
+html[data-theme] .study-groups-page .sg-card:hover { border-color: rgba(85,201,138,.55) !important; }
+
+/* Goals page — keep the summary strip and empty-state copy readable against the dark background. */
+html[data-theme] .goals-page .goals-summary-strip,
+html[data-theme] .goals-page .goals-empty,
+html[data-theme] .goals-page .goals-loading {
+  background: linear-gradient(145deg, rgba(27,32,43,.97), rgba(16,19,27,.98)) !important;
+  color: #edf0f6 !important;
+  border-color: rgba(148,163,184,.2) !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.025) !important;
+}
+html[data-theme] .goals-page .goals-summary-strip > div:nth-child(2) > span,
+html[data-theme] .goals-page .goals-empty > p,
+html[data-theme] .goals-page .goals-footnote,
+html[data-theme] .goals-page .goals-loading { color: #9ba5b5 !important; }
+html[data-theme] .goals-page .goals-summary-strip > div:nth-child(2) > strong,
+html[data-theme] .goals-page .goals-empty h2 { color: #edf0f6 !important; }
+html[data-theme] .goals-page .goals-summary-icon,
+html[data-theme] .goals-page .goals-empty-icon {
+  background: rgba(85,201,138,.12) !important;
+  color: #72d9a0 !important;
+}
+html[data-theme] .goals-page .goals-summary-completed { color: #72d9a0 !important; }
+
+/* Goals actions — match both create buttons to the standard dark surface with a subtle green accent. */
+html[data-theme] .goals-page :is(.goals-create-button,.goals-submit-button) {
+  background: linear-gradient(145deg, #1b202b, #10131b) !important;
+  color: #72d9a0 !important;
+  border: 1px solid rgba(85,201,138,.32) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.035), 0 5px 16px rgba(0,0,0,.16) !important;
+}
+html[data-theme] .goals-page :is(.goals-create-button,.goals-submit-button):hover:not(:disabled) {
+  background: linear-gradient(145deg, #222b32, #141b20) !important;
+  color: #a0edc0 !important;
+  border-color: rgba(85,201,138,.62) !important;
+  box-shadow: 0 0 0 3px rgba(85,201,138,.09), 0 8px 22px rgba(0,0,0,.22) !important;
+  transform: translateY(-1px);
+}
+html[data-theme] .goals-page :is(.goals-create-button,.goals-submit-button) svg { color: currentColor !important; }
+
+/* Messages — align the empty friend list and conversation welcome state with standard dark mode. */
+html[data-theme] :is(.chat-page, .messages-page) { color: #edf0f6 !important; }
+html[data-theme] :is(.chat-sidebar, .chat-main, .chat-panel, .chat-page-welcome, .chat-sidebar-empty, .chat-empty) {
+  background: linear-gradient(145deg, rgba(27,32,43,.97), rgba(16,19,27,.98)) !important;
+  color: #edf0f6 !important;
+  border-color: rgba(148,163,184,.2) !important;
+}
+html[data-theme] :is(.chat-sidebar-heading h2, .chat-page-welcome h1, .chat-page-welcome h2, .chat-empty strong) { color: #edf0f6 !important; }
+html[data-theme] :is(.chat-sidebar-heading p, .chat-sidebar-empty, .chat-page-welcome p, .chat-empty p, .local-chat-note) { color: #9ba5b5 !important; }
+html[data-theme] :is(.chat-sidebar-empty .invite-button, .invite-button) {
+  background: linear-gradient(145deg, #1b202b, #10131b) !important;
+  color: #72d9a0 !important;
+  border: 1px solid rgba(85,201,138,.32) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.025) !important;
+}
+html[data-theme] :is(.chat-sidebar-empty .invite-button, .invite-button):hover {
+  background: #202a30 !important;
+  color: #a0edc0 !important;
+  border-color: rgba(85,201,138,.62) !important;
+}
+html[data-theme] :is(.chat-page-welcome-icon, .chat-empty-icon) { background: rgba(85,201,138,.12) !important; color: #72d9a0 !important; }
+html[data-theme] :is(.chat-search, .chat-sidebar input, .chat-composer) { background: #10141c !important; color: #edf0f6 !important; border-color: rgba(148,163,184,.2) !important; }
+html[data-theme] :is(.chat-sidebar input, .chat-composer input) { background: transparent !important; color: #edf0f6 !important; }
+html[data-theme] .chat-composer button { background: #55c98a !important; color: #07130c !important; border-color: #55c98a !important; }
+
+/* Search fields — consistent sizing, alignment and dark surfaces across the app. */
+html[data-theme] :is(.search-box,.search-input-wrapper,.search-field,.friends-search,.group-search,.leaderboard-search,.chat-sidebar-search,.sg-search) {
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  min-height: 44px !important;
+  padding: 0 13px !important;
+  background: #11151d !important;
+  color: #9ba5b5 !important;
+  border: 1px solid rgba(148,163,184,.22) !important;
+  border-radius: 12px !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.025) !important;
+  transition: border-color .18s ease, box-shadow .18s ease, background .18s ease !important;
+}
+html[data-theme] :is(.search-box,.search-input-wrapper,.search-field,.friends-search,.group-search,.leaderboard-search,.chat-sidebar-search,.sg-search) > svg {
+  flex: 0 0 auto !important;
+  width: 16px !important;
+  height: 16px !important;
+  color: #7f8b9d !important;
+}
+html[data-theme] :is(.search-box,.search-input-wrapper,.search-field,.friends-search,.group-search,.leaderboard-search,.chat-sidebar-search,.sg-search) input {
+  box-sizing: border-box !important;
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 40px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  outline: none !important;
+  background: transparent !important;
+  color: #edf0f6 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  font: inherit !important;
+}
+html[data-theme] :is(.search-box,.search-input-wrapper,.search-field,.friends-search,.group-search,.leaderboard-search,.chat-sidebar-search,.sg-search) input::placeholder {
+  color: #778294 !important;
+  opacity: 1 !important;
+}
+html[data-theme] :is(.search-box,.search-input-wrapper,.search-field,.friends-search,.group-search,.leaderboard-search,.chat-sidebar-search,.sg-search) button {
+  flex: 0 0 auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 28px !important;
+  height: 28px !important;
+  padding: 0 !important;
+  border-radius: 8px !important;
+  background: rgba(148,163,184,.1) !important;
+  color: #aab4c2 !important;
+  border: 1px solid rgba(148,163,184,.12) !important;
+}
+html[data-theme] :is(.search-box,.search-input-wrapper,.search-field,.friends-search,.group-search,.leaderboard-search,.chat-sidebar-search,.sg-search):focus-within {
+  background: #121923 !important;
+  border-color: rgba(85,201,138,.65) !important;
+  box-shadow: 0 0 0 3px rgba(85,201,138,.1) !important;
+}
+
+/* Friends / Study Community banner — standard FOCENTRA dark theme */
+html[data-theme] .friends-page { color: #edf0f6 !important; }
+html[data-theme] .friends-page .invite-banner {
+  background: linear-gradient(135deg, #1a202b 0%, #141923 58%, #111720 100%) !important;
+  color: #edf0f6 !important;
+  border: 1px solid rgba(148,163,184,.18) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.025) !important;
+}
+html[data-theme] .friends-page .invite-banner-copy > span {
+  color: #72d9a0 !important;
+  letter-spacing: .14em !important;
+}
+html[data-theme] .friends-page .invite-banner-copy h2 {
+  color: #edf0f6 !important;
+}
+html[data-theme] .friends-page .invite-banner-copy p {
+  color: #9ba5b5 !important;
+}
+html[data-theme] .friends-page .invite-banner-icon {
+  background: rgba(85,201,138,.12) !important;
+  color: #72d9a0 !important;
+  border: 1px solid rgba(85,201,138,.16) !important;
+}
+html[data-theme] .friends-page .invite-banner .invite-button {
+  background: rgba(85,201,138,.1) !important;
+  color: #8be3b1 !important;
+  border: 1px solid rgba(85,201,138,.3) !important;
+  box-shadow: none !important;
+}
+html[data-theme] .friends-page .invite-banner .invite-button:hover {
+  background: rgba(85,201,138,.18) !important;
+  border-color: rgba(85,201,138,.55) !important;
+}
+html[data-theme] .friends-page .friends-demo-note {
+  color: #8793a4 !important;
+  background: rgba(148,163,184,.045) !important;
+  border-color: rgba(148,163,184,.14) !important;
+}
+
+/* Friends summary cards: keep all three statistic icons precisely centred. */
+html[data-theme] .friends-summary-card {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+}
+html[data-theme] .friends-summary-card .friends-summary-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 44px !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+  box-sizing: border-box !important;
+}
+html[data-theme] .friends-summary-card .friends-summary-icon svg {
+  display: block !important;
+  width: 21px !important;
+  height: 21px !important;
+  flex: 0 0 21px !important;
+  margin: 0 !important;
+}
+html[data-theme] .friends-summary-card > div:last-child {
+  min-width: 0;
+  align-self: center;
+}
+
+/* FocusBreak / Focus Timer — standard FOCENTRA dark theme */
+html[data-theme] .timer-page { color: #edf0f6 !important; }
+html[data-theme] .timer-page :is(.timer-card,.timer-settings-card,.timer-summary-card) {
+  background: linear-gradient(145deg, rgba(27,32,43,.97), rgba(16,19,27,.98)) !important;
+  color: #edf0f6 !important;
+  border: 1px solid rgba(148,163,184,.2) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.025) !important;
+}
+html[data-theme] .timer-page :is(.timer-card-heading h2,.timer-settings-card h2,.timer-summary-card h3,.timer-digits) { color: #edf0f6 !important; }
+html[data-theme] .timer-page :is(.timer-card-heading p,.timer-subtitle,.timer-encouragement,.duration-setting-heading label,.auto-switch-row p,.timer-summary-card p) { color: #9ba5b5 !important; }
+html[data-theme] .timer-page :is(.timer-session-label,.timer-summary-card > div > span) { color: #72d9a0 !important; }
+html[data-theme] .timer-page .timer-ring .timer-track { stroke: rgba(148,163,184,.16) !important; }
+html[data-theme] .timer-page .timer-ring .timer-progress { stroke: #55c98a !important; }
+html[data-theme] .timer-page .timer-ring-break .timer-progress { stroke: #72d9a0 !important; }
+html[data-theme] .timer-page :is(.timer-tab,.timer-reset-button,.duration-number-row button) {
+  background: rgba(148,163,184,.07) !important;
+  color: #c4ccd7 !important;
+  border: 1px solid rgba(148,163,184,.2) !important;
+}
+html[data-theme] .timer-page .timer-tab-active {
+  background: rgba(85,201,138,.13) !important;
+  color: #8be3b1 !important;
+  border-color: rgba(85,201,138,.35) !important;
+}
+html[data-theme] .timer-page :is(.timer-start-button,.apply-timer-button) {
+  background: rgba(85,201,138,.12) !important;
+  color: #8be3b1 !important;
+  border: 1px solid rgba(85,201,138,.32) !important;
+  box-shadow: none !important;
+}
+html[data-theme] .timer-page :is(.timer-start-button,.apply-timer-button):hover:not(:disabled) {
+  background: rgba(85,201,138,.2) !important;
+  border-color: rgba(85,201,138,.55) !important;
+}
+html[data-theme] .timer-page :is(.duration-setting,.auto-switch-row) { border-color: rgba(148,163,184,.16) !important; }
+html[data-theme] .timer-page .duration-setting-heading > span,
+html[data-theme] .timer-page .duration-number-row > span { color: #edf0f6 !important; }
+html[data-theme] .timer-page input[type="range"] { accent-color: #55c98a !important; }
+html[data-theme] .timer-page .toggle-switch { background: #303846 !important; border: 1px solid rgba(148,163,184,.25) !important; }
+html[data-theme] .timer-page .toggle-switch-on { background: #287b50 !important; border-color: #55c98a !important; }
+html[data-theme] .timer-page .timer-settings-icon,
+html[data-theme] .timer-page .summary-icon { background: rgba(85,201,138,.12) !important; color: #72d9a0 !important; }
+html[data-theme] .timer-page button:disabled { opacity: .4 !important; }
+
+/* FocusBreak timer SVG ring — keep it subtle and integrated with the dark surface. */
+html[data-theme] .timer-page .timer-svg {
+  display: block !important;
+  overflow: visible !important;
+}
+html[data-theme] .timer-page .timer-svg .timer-track {
+  fill: none !important;
+  stroke: rgba(148, 163, 184, 0.12) !important;
+  stroke-width: 7 !important;
+}
+html[data-theme] .timer-page .timer-svg .timer-progress {
+  fill: none !important;
+  stroke: #3c8f65 !important;
+  stroke-width: 7 !important;
+  stroke-linecap: round !important;
+  filter: none !important;
+}
+html[data-theme] .timer-page .timer-ring-break .timer-svg .timer-progress {
+  stroke: #527f69 !important;
+}
+
+/* FocusBreak duration values — make the 5 min break value match the 25 min focus value. */
+html[data-theme] .timer-page .duration-number-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+html[data-theme] .timer-page .duration-number-row > span {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 76px !important;
+  min-height: 38px !important;
+  padding: 0 12px !important;
+  border-radius: 10px !important;
+  background: rgba(148,163,184,.07) !important;
+  border: 1px solid rgba(148,163,184,.18) !important;
+  color: #edf0f6 !important;
+  font-weight: 600 !important;
+  box-sizing: border-box !important;
+}
+html[data-theme] .timer-page .duration-number-row button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 36px !important;
+  height: 36px !important;
+  padding: 0 !important;
+  border-radius: 10px !important;
+}
+
+/* Global standard dark mode cleanup — replace remaining white/light surfaces throughout the app. */
+html[data-theme] {
+  color-scheme: dark;
+  --theme-bg: #05070b;
+  --theme-panel: #10141c;
+  --theme-card-solid: #171c26;
+  --theme-glass: rgba(20, 25, 35, .92);
+  --theme-input: #10141c;
+  --theme-text: #edf0f6;
+  --theme-muted: #9ba5b5;
+  --theme-border: rgba(148, 163, 184, .2);
+}
+html[data-theme] :is(
+  .card, .panel, .surface, .modal-card, .modal-content, .dialog,
+  .empty-state, .empty-card, .settings-card, .stat-card, .summary-card,
+  .friend-card, .message-card, .goal-card, .leaderboard-card, .profile-card,
+  .search-box, .search-bar, .search-input-wrap, .input-wrapper,
+  .dropdown-menu, .select-menu, .popover-content, .tooltip-panel,
+  .notification-card, .request-card, .session-card, .duration-setting,
+  .timer-settings-card, .timer-summary-card
+) {
+  background-color: #111620 !important;
+  color: #edf0f6 !important;
+  border-color: rgba(148, 163, 184, .2) !important;
+}
+html[data-theme] :is(input:not([type="checkbox"]):not([type="radio"]), textarea, select) {
+  background-color: #0d1119 !important;
+  color: #edf0f6 !important;
+  border-color: rgba(148, 163, 184, .24) !important;
+  caret-color: #72d9a0;
+}
+html[data-theme] :is(input, textarea, select)::placeholder { color: #7f8999 !important; opacity: 1; }
+html[data-theme] :is(.card, .panel, .surface, .modal-card, .modal-content, .dialog)::before,
+html[data-theme] :is(.card, .panel, .surface, .modal-card, .modal-content, .dialog)::after {
+  border-color: rgba(148, 163, 184, .16) !important;
+}
+/* Catch common page-specific light utility surfaces without changing avatar/icon foregrounds. */
+html[data-theme] :is(.bg-white, .background-white, .white-bg, .light-surface, .light-panel, .light-card) {
+  background: #111620 !important;
+  color: #edf0f6 !important;
+  border-color: rgba(148, 163, 184, .2) !important;
+}
+html[data-theme] :is(.text-dark, .text-black, .heading-dark) { color: #edf0f6 !important; }
+
+/* Messages page: 24-hour conversation notice matches FOCENTRA standard dark mode. */
+html[data-theme] .local-chat-note {
+  background: #10141c !important;
+  color: #9ba5b5 !important;
+  border: 1px solid rgba(148, 163, 184, .18) !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  margin: 10px 0 0 !important;
+  font-size: 12px !important;
+  line-height: 1.55 !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .025) !important;
+}
+
+
+/* Focus Timer controls — theme-token styling for Focus/Break tabs and duration value badges. */
+html[data-theme] .timer-page .timer-mode-tabs .timer-tab {
+  background: var(--theme-panel, #10141c) !important;
+  color: var(--theme-text, #edf0f6) !important;
+  border: 1px solid var(--theme-border, rgba(148, 163, 184, .2)) !important;
+  box-shadow: none !important;
+}
+html[data-theme] .timer-page .timer-mode-tabs .timer-tab:hover:not(:disabled) {
+  background: var(--theme-soft, rgba(148, 163, 184, .08)) !important;
+  color: var(--theme-accent, #55c98a) !important;
+  border-color: var(--theme-border, rgba(148, 163, 184, .2)) !important;
+}
+html[data-theme] .timer-page .timer-mode-tabs .timer-tab.timer-tab-active {
+  background: var(--theme-soft, rgba(85, 201, 138, .12)) !important;
+  color: var(--theme-accent, #55c98a) !important;
+  border-color: var(--theme-border, rgba(148, 163, 184, .2)) !important;
+  box-shadow: inset 0 0 0 1px var(--theme-border, rgba(148, 163, 184, .2)) !important;
+}
+html[data-theme] .timer-page .duration-setting-heading > span,
+html[data-theme] .timer-page .duration-number-row > span {
+  background: var(--theme-panel, #10141c) !important;
+  color: var(--theme-text, #edf0f6) !important;
+  border: 1px solid var(--theme-border, rgba(148, 163, 184, .2)) !important;
+  box-shadow: none !important;
+}
