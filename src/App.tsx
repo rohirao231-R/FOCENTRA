@@ -1699,7 +1699,6 @@ function App() {
         {currentPage === 'Friends' && renderFriends()}
         {currentPage === 'Chat' && renderChat()}
         {currentPage === 'Study Groups' && userId && <StudyGroups userId={userId} currentProfile={profile} />}
-        {currentPage === 'Group Timer' && userId && <GroupTimer userId={userId} initialGroupId={groupTimerGroupId} onBack={() => navigate('Study Groups')} />}
         {currentPage === 'Leaderboard' && userId && (
           <Leaderboard userId={userId} onStartFocus={() => navigate('Focus Timer')} />
         )}
