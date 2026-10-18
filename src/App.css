@@ -3394,3 +3394,5 @@ hr,
 .timer-fullscreen-mode .timer-controls{justify-content:center;gap:16px;margin-top:28px}
 .timer-fullscreen-mode .timer-start-button{min-width:170px}
 @media(max-width:600px){.timer-fullscreen-mode .timer-card{min-height:75vh;padding:20px 12px}.timer-fullscreen-mode .timer-ring{width:78vw;height:78vw}.timer-fullscreen-toolbar{font-size:9px}}
+
+.timer-fullscreen-mode>.page-heading{display:none!important}
