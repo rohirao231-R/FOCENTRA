@@ -1094,3 +1094,66 @@ html[data-theme] .timer-page .duration-number-row > span {
   border: 1px solid var(--theme-border, rgba(148, 163, 184, .2)) !important;
   box-shadow: none !important;
 }
+
+
+/* Friends and conversation controls — keep secondary actions on the themed dark surface. */
+html[data-theme] .friends-page .friend-chat-button {
+  background: var(--theme-accent, #299c62) !important;
+  color: var(--theme-button-text, #fff) !important;
+  border: 1px solid var(--theme-accent, #299c62) !important;
+  border-radius: 10px !important;
+  transition: background .2s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease, transform .18s ease !important;
+}
+html[data-theme] .friends-page .friend-chat-button:hover:not(:disabled) {
+  background: var(--theme-soft, rgba(85, 201, 138, .12)) !important;
+  color: var(--theme-accent, #55c98a) !important;
+  border-color: var(--theme-accent, #55c98a) !important;
+}
+html[data-theme] .friends-page .decline-request-button,
+html[data-theme] .chat-header .chat-back-button,
+html[data-theme] .chat-header .chat-more-button {
+  background: var(--theme-card-solid, #171c26) !important;
+  color: var(--theme-muted, #9ba5b5) !important;
+  border: 1px solid var(--theme-border, rgba(148, 163, 184, .2)) !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  transition: background .2s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease, transform .18s ease !important;
+}
+html[data-theme] .friends-page .decline-request-button:hover:not(:disabled),
+html[data-theme] .chat-header .chat-back-button:hover:not(:disabled),
+html[data-theme] .chat-header .chat-more-button:hover:not(:disabled) {
+  background: var(--theme-soft, rgba(148, 163, 184, .08)) !important;
+  color: var(--theme-accent, #72d9a0) !important;
+  border-color: var(--theme-accent, #55c98a) !important;
+  box-shadow: 0 0 0 2px var(--theme-glow, rgba(85, 201, 138, .12)) !important;
+}
+html[data-theme] .friends-page .friend-chat-button:focus-visible,
+html[data-theme] .friends-page .decline-request-button:focus-visible,
+html[data-theme] .chat-header .chat-back-button:focus-visible,
+html[data-theme] .chat-header .chat-more-button:focus-visible {
+  outline: 2px solid var(--theme-accent, #55c98a) !important;
+  outline-offset: 2px !important;
+}
+html[data-theme] .friends-page .friend-chat-button:active:not(:disabled),
+html[data-theme] .friends-page .decline-request-button:active:not(:disabled),
+html[data-theme] .chat-header .chat-back-button:active:not(:disabled),
+html[data-theme] .chat-header .chat-more-button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+html[data-theme] .friends-page .friend-chat-button:disabled,
+html[data-theme] .friends-page .decline-request-button:disabled,
+html[data-theme] .chat-header .chat-back-button:disabled,
+html[data-theme] .chat-header .chat-more-button:disabled {
+  background: var(--theme-card-solid, #171c26) !important;
+  color: var(--theme-muted, #9ba5b5) !important;
+  border-color: var(--theme-border, rgba(148, 163, 184, .2)) !important;
+  opacity: .72 !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+html[data-theme] .friends-page .friend-chat-button svg,
+html[data-theme] .friends-page .decline-request-button svg,
+html[data-theme] .chat-header .chat-back-button svg,
+html[data-theme] .chat-header .chat-more-button svg {
+  color: currentColor !important;
+}
