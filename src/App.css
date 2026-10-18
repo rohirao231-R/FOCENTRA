@@ -2957,3 +2957,425 @@ button:focus-visible, input:focus-visible {
   border-radius: 50%;
   background: #dc2626;
 }
+
+/* =========================================
+   FOCENTRA — DARK THEME
+   Append this to the bottom of app.css
+   ========================================= */
+
+:root {
+  color-scheme: dark;
+
+  --green: #a78bfa;
+  --green-dark: #8b5cf6;
+  --green-light: #2b2143;
+  --muted: #a1a1b5;
+  --border: #303043;
+
+  --dark-bg: #101018;
+  --dark-sidebar: #15151f;
+  --dark-card: #1b1b28;
+  --dark-card-hover: #222232;
+  --dark-input: #141420;
+  --dark-text: #f0eff8;
+  --dark-muted: #a1a1b5;
+  --dark-border: #303043;
+  --accent: #a78bfa;
+  --accent-hover: #c4b5fd;
+}
+
+/* Global colors */
+
+html,
+body,
+#root {
+  min-height: 100%;
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body {
+  color: var(--dark-text);
+}
+
+.app-shell {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* Sidebar */
+
+.sidebar {
+  background: var(--dark-sidebar);
+  color: var(--dark-text);
+  border-color: var(--dark-border);
+}
+
+.sidebar *,
+.sidebar a,
+.sidebar button {
+  color: inherit;
+}
+
+.sidebar a:hover,
+.sidebar button:hover {
+  background: var(--dark-card-hover);
+}
+
+.sidebar .active,
+.sidebar .active a,
+.sidebar a.active {
+  color: var(--accent);
+  background: var(--green-light);
+}
+
+/* Header / topbar */
+
+.topbar {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  border-color: var(--dark-border);
+}
+
+.topbar button,
+.topbar a {
+  color: var(--dark-text);
+}
+
+/* Main content */
+
+main,
+.main-content,
+.dashboard,
+.dashboard-content,
+.page-content,
+.content-area,
+.app-main {
+  color: var(--dark-text);
+}
+
+section,
+.panel,
+.widget,
+.content-card {
+  border-color: var(--dark-border);
+}
+
+/* Cards and containers */
+
+.card,
+.stat-card,
+.dashboard-card,
+.task-card,
+.friend-card,
+.chat-card,
+.settings-card,
+.timer-card,
+.session-card,
+.summary-card,
+.activity-card,
+.goal-card,
+.empty-state,
+.modal-content,
+.dropdown-menu,
+.popover-content {
+  background: var(--dark-card);
+  color: var(--dark-text);
+  border-color: var(--dark-border);
+}
+
+/* Common white backgrounds */
+
+.card,
+[class*="-card"],
+[class*="-panel"],
+[class*="-modal"],
+[class*="-dropdown"],
+[class*="-popover"] {
+  border-color: var(--dark-border);
+}
+
+[class*="-card"]:not([class*="hero"]):not([class*="banner"]),
+[class*="-panel"],
+[class*="-modal"],
+[class*="-dropdown"],
+[class*="-popover"] {
+  color: var(--dark-text);
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+small,
+strong,
+span {
+  border-color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--dark-text);
+}
+
+p,
+.subtitle,
+.description,
+.muted,
+.helper-text,
+.secondary-text {
+  color: var(--dark-muted);
+}
+
+/* Inputs */
+
+input,
+textarea,
+select {
+  background: var(--dark-input);
+  color: var(--dark-text);
+  border-color: var(--dark-border);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #77778e;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent);
+  outline-color: var(--accent);
+}
+
+option {
+  background: var(--dark-card);
+  color: var(--dark-text);
+}
+
+/* Buttons */
+
+button {
+  border-color: var(--dark-border);
+}
+
+button:not(.primary-button):not(.start-button):not(.accent-button) {
+  color: var(--dark-text);
+}
+
+button:hover {
+  border-color: #51416f;
+}
+
+/* Links and icons */
+
+a {
+  color: var(--accent);
+}
+
+svg {
+  flex-shrink: 0;
+}
+
+/* Primary actions */
+
+.primary-button,
+.start-button,
+.accent-button,
+button.primary,
+button[type="submit"] {
+  background: var(--accent);
+  color: #171222;
+  border-color: transparent;
+}
+
+.primary-button:hover,
+.start-button:hover,
+.accent-button:hover,
+button.primary:hover,
+button[type="submit"]:hover {
+  background: var(--accent-hover);
+  color: #171222;
+}
+
+/* Dashboard statistics */
+
+.stat-card,
+.stats-card,
+.stat-item {
+  background: var(--dark-card);
+  border-color: var(--dark-border);
+}
+
+.stat-card h2,
+.stat-card h3,
+.stat-card strong,
+.stat-item strong {
+  color: var(--dark-text);
+}
+
+/* Focus timer */
+
+.timer-container,
+.timer-section,
+.focus-timer,
+.timer-wrapper {
+  color: var(--dark-text);
+}
+
+.timer-display,
+.timer-time,
+.time-display {
+  color: var(--accent);
+}
+
+.timer-controls button,
+.timer-container button {
+  border-color: var(--dark-border);
+}
+
+/* Friends and chat */
+
+.friends-section,
+.friends-list,
+.chat-list,
+.chat-sidebar,
+.chat-window,
+.chat-messages,
+.chat-container,
+.message-list {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  border-color: var(--dark-border);
+}
+
+.friend-item,
+.chat-item,
+.conversation-item,
+.message,
+.message-bubble {
+  border-color: var(--dark-border);
+}
+
+.friend-item:hover,
+.chat-item:hover,
+.conversation-item:hover {
+  background: var(--dark-card-hover);
+}
+
+.message-input,
+.chat-input,
+.chat-composer {
+  background: var(--dark-card);
+  border-color: var(--dark-border);
+}
+
+.message.sent,
+.message-bubble.sent,
+.sent-message {
+  background: #39275d;
+  color: #f4efff;
+}
+
+.message.received,
+.message-bubble.received,
+.received-message {
+  background: #272737;
+  color: var(--dark-text);
+}
+
+/* Settings and DND */
+
+.settings-section,
+.settings-panel,
+.dnd-section,
+.dnd-card,
+.preference-card {
+  background: var(--dark-card);
+  color: var(--dark-text);
+  border-color: var(--dark-border);
+}
+
+/* Tables and dividers */
+
+table,
+th,
+td {
+  border-color: var(--dark-border);
+}
+
+th {
+  color: var(--dark-text);
+}
+
+td {
+  color: var(--dark-muted);
+}
+
+hr,
+.divider,
+.separator {
+  border-color: var(--dark-border);
+}
+
+/* Badges and status indicators */
+
+.badge,
+.tag,
+.status-badge {
+  border-color: var(--dark-border);
+}
+
+.online,
+.status-online {
+  color: #86efac;
+}
+
+/* Scrollbars */
+
+* {
+  scrollbar-color: #424256 var(--dark-bg);
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #424256;
+  border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #62517f;
+}
+
+/* Selection */
+
+::selection {
+  background: #6d4bb8;
+  color: #ffffff;
+}
+
+/* Preserve the existing hero/banner gradients if they use
+   their own background images or gradients. */
+
+/* Responsive layout remains controlled by your existing
+   media queries. */
+
