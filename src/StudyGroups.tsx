@@ -7,14 +7,14 @@ type Visibility = 'public' | 'private'
 type StudyGroup = { id: string; slug: string; name: string; description: string; category: string; visibility: Visibility; created_by: string | null }
 type GroupMessage = { id: string; group_id: string; sender_id: string; content: string; created_at: string }
 type GroupProfile = { id: string; username: string; display_name: string; created_at?: string }
-type Props = { userId: string; currentProfile: GroupProfile | null; onOpenGroupTimer?: (groupId: string) => void }
+type Props = { userId: string; currentProfile: GroupProfile | null }
 
 const categories = ['General', 'JEE', 'CBSE', 'State Board', 'Matriculation', 'UPSC', 'NEET', 'College', 'Other']
 const prettyTime = (date: string) => new Date(date).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
 const initials = (name: string) => name.trim().split(/\s+/).slice(0, 2).map((part) => part[0]?.toUpperCase()).join('') || 'S'
 const makeSlug = (name: string) => `${name.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 36) || 'study-group'}-${Math.random().toString(36).slice(2, 8)}`
 
-export default function StudyGroups({ userId, currentProfile, onOpenGroupTimer }: Props) {
+export default function StudyGroups({ userId, currentProfile }: Props) {
   const [groups, setGroups] = useState<StudyGroup[]>([])
   const [joinedIds, setJoinedIds] = useState<string[]>([])
   const [activeGroup, setActiveGroup] = useState<StudyGroup | null>(null)
@@ -239,7 +239,7 @@ export default function StudyGroups({ userId, currentProfile, onOpenGroupTimer }
   if (activeGroup && isMember) {
     const privateGroup = activeGroup.visibility === 'private'
     return <div className="page-content study-groups-page">
-      <div className="sg-chat-heading"><button className="sg-back-button" onClick={() => { setActiveGroup(null); setSelectedProfile(null); setInviteNotice('') }}><ArrowLeft size={16} /> All groups</button><div className="sg-group-heading-icon">{privateGroup ? <LockKeyhole size={22} /> : <GraduationCap size={23} />}</div><div className="sg-group-heading-copy"><span>{privateGroup ? 'PRIVATE STUDY GROUP' : 'PUBLIC STUDY GROUP'}</span><h1>{activeGroup.name}</h1><p>{activeGroup.description}</p></div><div className="sg-chat-actions"><button className="sg-invite-button" onClick={() => onOpenGroupTimer?.(activeGroup.id)}><Users size={15} /> Group timer</button>{isOwner && privateGroup && <button className="sg-invite-button" onClick={() => void copyInviteLink()} disabled={inviteBusy}><Link2 size={15} />{inviteBusy ? 'Creating link…' : 'Invite link'}</button>}{isOwner ? <><span className="sg-owner-pill">Your group</span><button className="sg-delete-button" onClick={() => void deleteGroup(activeGroup)} disabled={deletingGroup}><Trash2 size={15} />{deletingGroup ? 'Deleting…' : 'Delete group'}</button></> : <button className="sg-leave-button" onClick={() => void leaveGroup(activeGroup)}>Leave group</button>}</div></div>
+      <div className="sg-chat-heading"><button className="sg-back-button" onClick={() => { setActiveGroup(null); setSelectedProfile(null); setInviteNotice('') }}><ArrowLeft size={16} /> All groups</button><div className="sg-group-heading-icon">{privateGroup ? <LockKeyhole size={22} /> : <GraduationCap size={23} />}</div><div className="sg-group-heading-copy"><span>{privateGroup ? 'PRIVATE STUDY GROUP' : 'PUBLIC STUDY GROUP'}</span><h1>{activeGroup.name}</h1><p>{activeGroup.description}</p></div><div className="sg-chat-actions">{isOwner && privateGroup && <button className="sg-invite-button" onClick={() => void copyInviteLink()} disabled={inviteBusy}><Link2 size={15} />{inviteBusy ? 'Creating link…' : 'Invite link'}</button>}{isOwner ? <><span className="sg-owner-pill">Your group</span><button className="sg-delete-button" onClick={() => void deleteGroup(activeGroup)} disabled={deletingGroup}><Trash2 size={15} />{deletingGroup ? 'Deleting…' : 'Delete group'}</button></> : <button className="sg-leave-button" onClick={() => void leaveGroup(activeGroup)}>Leave group</button>}</div></div>
       {error && <div className="sg-error" role="alert">{error}<button onClick={() => setError('')} aria-label="Dismiss error"><X size={14} /></button></div>}
       {inviteNotice && <div className="sg-success" role="status"><Check size={15} />{inviteNotice}<button onClick={() => setInviteNotice('')} aria-label="Dismiss message"><X size={14} /></button></div>}
       <section className="sg-chat-panel"><div className="sg-chat-topline"><div><strong><MessageCircle size={16} /> Group conversation</strong><span>Profiles are available from messages. The member list is private.</span></div><span className={`sg-public-pill ${privateGroup ? 'sg-private-pill' : ''}`}>{privateGroup ? <><LockKeyhole size={12} /> Private</> : <><Globe2 size={12} /> Public</>} group</span></div>
