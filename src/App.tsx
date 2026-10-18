@@ -35,7 +35,6 @@ import {
   Settings,
   ShieldCheck,
   Sparkles,
-  Target,
   Trash2,
   Trophy,
   UserMinus,
@@ -47,7 +46,6 @@ import { supabase } from './lib/supabaseClient'
 import AuthPage from './auth'
 import StudyGroups from './StudyGroups'
 import Leaderboard from './Leaderboard'
-import Goals from './Goals'
 import ProfilePage from './Profile'
 import './App.css'
 import './Theme.css'
@@ -60,7 +58,6 @@ type Page =
   | 'Chat'
   | 'Leaderboard'
   | 'Study Groups'
-  | 'Goals'
   | 'Profile'
 
 type FriendTab = 'friends' | 'requests' | 'discover'
@@ -129,7 +126,6 @@ const navigation: { label: Page; icon: ReactNode }[] = [
   { label: 'Chat', icon: <MessageCircle size={18} /> },
   { label: 'Leaderboard', icon: <Trophy size={18} /> },
   { label: 'Study Groups', icon: <GraduationCap size={18} /> },
-  { label: 'Goals', icon: <Target size={18} /> },
   { label: 'Profile', icon: <CircleUserRound size={18} /> },
 ]
 
@@ -1670,7 +1666,6 @@ function App() {
         {currentPage === 'Leaderboard' && userId && (
           <Leaderboard userId={userId} onStartFocus={() => navigate('Focus Timer')} />
         )}
-        {currentPage === 'Goals' && userId && <Goals userId={userId} friends={friends.map((friend) => ({ id: friend.id, name: friend.name, username: friend.username, initials: friend.initials, color: friend.color }))} completedSessions={completedSessions} onStartFocus={() => navigate('Focus Timer')} />}
         {currentPage === 'Profile' && <ProfilePage session={session} profile={profile} displayName={displayName} doNotDisturb={doNotDisturb} dndLoading={dndLoading} onToggleDnd={() => void toggleDoNotDisturb()} onProfileUpdated={(updatedProfile) => { setProfile(updatedProfile); setProfiles((previous) => previous.map((item) => item.id === updatedProfile.id ? updatedProfile : item)) }} />}
 
         <footer className="app-footer"><span>FOCENTRA<span className="footer-dot">.</span></span><span>Build better habits, one session at a time.</span><span className="app-footer-credit">Made by Rohith Rao</span></footer>
