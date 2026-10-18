@@ -36,6 +36,7 @@ import {
   ShieldCheck,
   Sparkles,
   Trash2,
+  Target,
   Trophy,
   UserMinus,
   Users,
