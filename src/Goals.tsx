@@ -7,7 +7,8 @@ type GoalFriend = { id: string; name: string; username: string; initials: string
 type GoalType = 'individual' | 'group'
 type StudyGoal = { id: string; creator_id: string; subject: string; target_minutes: number; goal_type: GoalType; created_at: string }
 type GoalProgress = { goal_id: string; user_id: string; username: string | null; display_name: string | null; focus_minutes: number | string; target_minutes: number | string; completed: boolean; credits_awarded: number | string }
-type Props = { userId: string; friends: GoalFriend[]; onStartFocus: () => void }
+type SavedFocusSession = { id: string; user_id: string; duration_minutes: number; completed_at: string; subject?: string | null; description?: string | null }
+type Props = { userId: string; friends: GoalFriend[]; completedSessions: SavedFocusSession[]; onStartFocus: () => void }
 
 function prettyDuration(minutes: number) {
   if (minutes < 60) return `${minutes} min`
@@ -20,7 +21,7 @@ function displayPerson(person: GoalProgress) {
   return person.display_name?.trim() || person.username?.trim() || 'FOCENTRA student'
 }
 
-export default function Goals({ userId, friends, onStartFocus }: Props) {
+export default function Goals({ userId, friends, completedSessions, onStartFocus }: Props) {
   const [goals, setGoals] = useState<StudyGoal[]>([])
   const [progress, setProgress] = useState<Record<string, GoalProgress[]>>({})
   const [loading, setLoading] = useState(true)
@@ -73,7 +74,19 @@ export default function Goals({ userId, friends, onStartFocus }: Props) {
 
   useEffect(() => { void loadGoals() }, [loadGoals])
 
-  const completedCount = goals.filter((goal) => (progress[goal.id] ?? []).some((person) => person.user_id === userId && person.completed)).length
+  // Derive individual goal progress from saved focus sessions instead of depending on the progress RPC.
+  const sessionsForGoal = (goal: StudyGoal) => completedSessions.filter((session) =>
+    session.user_id === userId &&
+    Boolean(session.subject?.trim()) &&
+    session.subject!.trim().toLocaleLowerCase() === goal.subject.trim().toLocaleLowerCase() &&
+    new Date(session.completed_at).getTime() >= new Date(goal.created_at).getTime()
+  )
+  const completedCount = goals.filter((goal) => {
+    if (goal.goal_type === 'individual') {
+      return sessionsForGoal(goal).reduce((sum, session) => sum + Number(session.duration_minutes || 0), 0) >= Number(goal.target_minutes)
+    }
+    return (progress[goal.id] ?? []).some((person) => person.user_id === userId && person.completed)
+  }).length
 
   function toggleFriend(id: string) {
     setSelectedFriends((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id])
@@ -154,10 +167,11 @@ export default function Goals({ userId, friends, onStartFocus }: Props) {
       {loading ? <div className="goals-loading"><div className="goals-loader" /><strong>Loading your goals…</strong></div> : goals.length === 0 && !error ? <section className="goals-empty"><div className="goals-empty-icon"><Target size={28} /></div><h2>Your next milestone starts here.</h2><p>Create a subject-based goal and your completed focus sessions will automatically track progress.</p><button onClick={() => setFormOpen(true)} className="goals-submit-button"><Plus size={16} />Create your first goal</button><button onClick={onStartFocus} className="goals-text-button"><Clock3 size={15} />Go to Focus Timer</button></section> : <div className="goals-grid">{goals.map((goal) => {
         const people = progress[goal.id] ?? []
         const mine = people.find((person) => person.user_id === userId)
-        const currentMinutes = Math.max(0, Number(mine?.focus_minutes) || 0)
+        const individualMinutes = goal.goal_type === 'individual' ? sessionsForGoal(goal).reduce((sum, session) => sum + Number(session.duration_minutes || 0), 0) : 0
+        const currentMinutes = Math.max(0, goal.goal_type === 'individual' ? individualMinutes : Number(mine?.focus_minutes) || 0)
         const target = Number(goal.target_minutes) || 1
         const percent = Math.min(100, Math.round((currentMinutes / target) * 100))
-        const isComplete = Boolean(mine?.completed)
+        const isComplete = goal.goal_type === 'individual' ? currentMinutes >= target : Boolean(mine?.completed)
         const allComplete = people.length > 0 && people.every((person) => person.completed)
         return <article className={`goals-card ${isComplete ? 'goals-card-complete' : ''}`} key={goal.id}>
           <div className="goals-card-top"><span className={`goals-kind-pill ${goal.goal_type}`}><span />{goal.goal_type === 'group' ? 'Group goal' : 'Individual goal'}</span>{isComplete && <span className="goals-completed-pill"><CheckCircle2 size={13} />Completed</span>}</div>
