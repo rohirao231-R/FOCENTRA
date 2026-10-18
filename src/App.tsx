@@ -48,7 +48,6 @@ import {
 import { supabase } from './lib/supabaseClient'
 import AuthPage from './auth'
 import StudyGroups from './StudyGroups'
-import GroupTimer from './GroupTimer'
 import Leaderboard from './Leaderboard'
 import ProfilePage from './Profile'
 import './App.css'
@@ -58,7 +57,6 @@ import './Profile.css'
 type Page =
   | 'Dashboard'
   | 'Focus Timer'
-  | 'Group Timer'
   | 'Friends'
   | 'Chat'
   | 'Leaderboard'
@@ -127,7 +125,6 @@ const avatarColors = [
 const navigation: { label: Page; icon: ReactNode }[] = [
   { label: 'Dashboard', icon: <Home size={18} /> },
   { label: 'Focus Timer', icon: <Clock3 size={18} /> },
-  { label: 'Group Timer', icon: <Users size={18} /> },
   { label: 'Friends', icon: <Users size={18} /> },
   { label: 'Chat', icon: <MessageCircle size={18} /> },
   { label: 'Leaderboard', icon: <Trophy size={18} /> },
@@ -222,7 +219,6 @@ function App() {
 
   const [timerMode, setTimerMode] = useState<TimerMode>('focus')
   const [timerFullscreen, setTimerFullscreen] = useState(false)
-  const [groupTimerGroupId, setGroupTimerGroupId] = useState<string | null>(null)
   const timerFullscreenRef = useRef<HTMLDivElement | null>(null)
   const [focusMinutes, setFocusMinutes] = useState(25)
   const [breakMinutes, setBreakMinutes] = useState(5)
@@ -1702,7 +1698,7 @@ function App() {
         {currentPage === 'Focus Timer' && renderTimer()}
         {currentPage === 'Friends' && renderFriends()}
         {currentPage === 'Chat' && renderChat()}
-        {currentPage === 'Study Groups' && userId && <StudyGroups userId={userId} currentProfile={profile} onOpenGroupTimer={(groupId) => { setGroupTimerGroupId(groupId); navigate('Group Timer') }} />}
+        {currentPage === 'Study Groups' && userId && <StudyGroups userId={userId} currentProfile={profile} />}
         {currentPage === 'Group Timer' && userId && <GroupTimer userId={userId} initialGroupId={groupTimerGroupId} onBack={() => navigate('Study Groups')} />}
         {currentPage === 'Leaderboard' && userId && (
           <Leaderboard userId={userId} onStartFocus={() => navigate('Focus Timer')} />
