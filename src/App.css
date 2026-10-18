@@ -3379,3 +3379,18 @@ hr,
 /* Responsive layout remains controlled by your existing
    media queries. */
 
+
+
+/* Distraction-free focus timer */
+.timer-fullscreen-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;color:#86a996;font-size:11px;font-weight:800;letter-spacing:1.4px}
+.timer-fullscreen-button{display:inline-flex;align-items:center;gap:7px;padding:9px 12px;border:1px solid #355344;border-radius:10px;background:#183126;color:#dff8e9;font-weight:700;cursor:pointer}
+.timer-stop-button{display:inline-flex;align-items:center;gap:7px;padding:0 16px!important;width:auto!important}
+.timer-fullscreen-mode{position:fixed!important;inset:0!important;z-index:99999!important;width:100vw!important;height:100vh!important;max-width:none!important;overflow:auto!important;display:flex!important;align-items:center!important;justify-content:center!important;margin:0!important;padding:clamp(18px,5vw,64px)!important;background:radial-gradient(ellipse at top,#173e2d 0%,#0b1710 62%)!important;color:#f1fff5!important}
+.timer-fullscreen-mode .timer-layout{width:min(760px,100%);display:block!important;margin:0 auto}
+.timer-fullscreen-mode .timer-card{width:100%;min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #315441;border-radius:28px;background:rgb(13 29 20 / 88%);padding:clamp(22px,5vw,56px);box-shadow:0 30px 100px rgb(0 0 0 / 30%)}
+.timer-fullscreen-mode .timer-fullscreen-toolbar{width:100%;max-width:520px}
+.timer-fullscreen-mode .timer-ring{width:min(58vw,360px);height:min(58vw,360px);max-width:360px;max-height:360px}
+.timer-fullscreen-mode .timer-digits{font-size:clamp(52px,10vw,88px);font-variant-numeric:tabular-nums}
+.timer-fullscreen-mode .timer-controls{justify-content:center;gap:16px;margin-top:28px}
+.timer-fullscreen-mode .timer-start-button{min-width:170px}
+@media(max-width:600px){.timer-fullscreen-mode .timer-card{min-height:75vh;padding:20px 12px}.timer-fullscreen-mode .timer-ring{width:78vw;height:78vw}.timer-fullscreen-toolbar{font-size:9px}}
