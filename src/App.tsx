@@ -635,7 +635,7 @@ function App() {
 
     const { data, error } = await supabase
       .from('focus_sessions')
-      .select('id, user_id, duration_minutes, completed_at')
+      .select('id, user_id, duration_minutes, completed_at, subject, description')
       .eq('user_id', userId)
       .order('completed_at', { ascending: false })
 
@@ -1670,7 +1670,7 @@ function App() {
         {currentPage === 'Leaderboard' && userId && (
           <Leaderboard userId={userId} onStartFocus={() => navigate('Focus Timer')} />
         )}
-        {currentPage === 'Goals' && userId && <Goals userId={userId} friends={friends.map((friend) => ({ id: friend.id, name: friend.name, username: friend.username, initials: friend.initials, color: friend.color }))} onStartFocus={() => navigate('Focus Timer')} />}
+        {currentPage === 'Goals' && userId && <Goals userId={userId} friends={friends.map((friend) => ({ id: friend.id, name: friend.name, username: friend.username, initials: friend.initials, color: friend.color }))} completedSessions={completedSessions} onStartFocus={() => navigate('Focus Timer')} />}
         {currentPage === 'Profile' && <ProfilePage session={session} profile={profile} displayName={displayName} doNotDisturb={doNotDisturb} dndLoading={dndLoading} onToggleDnd={() => void toggleDoNotDisturb()} onProfileUpdated={(updatedProfile) => { setProfile(updatedProfile); setProfiles((previous) => previous.map((item) => item.id === updatedProfile.id ? updatedProfile : item)) }} />}
 
         <footer className="app-footer"><span>FOCENTRA<span className="footer-dot">.</span></span><span>Build better habits, one session at a time.</span><span className="app-footer-credit">Made by Rohith Rao</span></footer>
