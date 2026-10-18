@@ -3,6 +3,7 @@ import {
   useCallback,
   useEffect,
   useState,
+  useRef,
   type FormEvent,
   type ReactNode,
 } from 'react'
@@ -18,6 +19,7 @@ import {
   CheckCheck,
   CircleUserRound,
   Clock3,
+  Expand,
   Flame,
   GraduationCap,
   Home,
@@ -46,6 +48,7 @@ import {
 import { supabase } from './lib/supabaseClient'
 import AuthPage from './auth'
 import StudyGroups from './StudyGroups'
+import GroupTimer from './GroupTimer'
 import Leaderboard from './Leaderboard'
 import ProfilePage from './Profile'
 import './App.css'
@@ -55,6 +58,7 @@ import './Profile.css'
 type Page =
   | 'Dashboard'
   | 'Focus Timer'
+  | 'Group Timer'
   | 'Friends'
   | 'Chat'
   | 'Leaderboard'
@@ -123,6 +127,7 @@ const avatarColors = [
 const navigation: { label: Page; icon: ReactNode }[] = [
   { label: 'Dashboard', icon: <Home size={18} /> },
   { label: 'Focus Timer', icon: <Clock3 size={18} /> },
+  { label: 'Group Timer', icon: <Users size={18} /> },
   { label: 'Friends', icon: <Users size={18} /> },
   { label: 'Chat', icon: <MessageCircle size={18} /> },
   { label: 'Leaderboard', icon: <Trophy size={18} /> },
@@ -216,6 +221,9 @@ function App() {
   const [totalFocusSeconds, setTotalFocusSeconds] = useState(0)
 
   const [timerMode, setTimerMode] = useState<TimerMode>('focus')
+  const [timerFullscreen, setTimerFullscreen] = useState(false)
+  const [groupTimerGroupId, setGroupTimerGroupId] = useState<string | null>(null)
+  const timerFullscreenRef = useRef<HTMLDivElement | null>(null)
   const [focusMinutes, setFocusMinutes] = useState(25)
   const [breakMinutes, setBreakMinutes] = useState(5)
   const [timerSeconds, setTimerSeconds] = useState(1500)
@@ -655,6 +663,34 @@ function App() {
     if (userId) void loadFocusSessions()
   }, [userId, loadFocusSessions])
 
+  useEffect(() => {
+    const handleFullscreenChange = () => setTimerFullscreen(Boolean(document.fullscreenElement))
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && timerFullscreen) {
+        setTimerFullscreen(false)
+        if (document.fullscreenElement) void document.exitFullscreen().catch(() => undefined)
+      }
+    }
+    document.addEventListener('fullscreenchange', handleFullscreenChange)
+    document.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange)
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [timerFullscreen])
+
+  async function toggleTimerFullscreen() {
+    if (timerFullscreen) {
+      setTimerFullscreen(false)
+      if (document.fullscreenElement) await document.exitFullscreen().catch(() => undefined)
+      return
+    }
+    setTimerFullscreen(true)
+    if (timerFullscreenRef.current?.requestFullscreen) {
+      try { await timerFullscreenRef.current.requestFullscreen() } catch { /* CSS fallback */ }
+    }
+  }
+
   // Timer countdown. A completed focus timer must be described and saved before it earns credit.
   useEffect(() => {
     if (!timerRunning) return
@@ -670,6 +706,8 @@ function App() {
     if (!timerRunning || timerSeconds !== 0) return
 
     setTimerRunning(false)
+    setTimerFullscreen(false)
+    if (document.fullscreenElement) void document.exitFullscreen().catch(() => undefined)
 
     if (timerMode === 'focus') {
       setPendingSessionMinutes(focusMinutes)
@@ -1312,15 +1350,16 @@ function App() {
       : 0
 
     return (
-      <div className="page-content timer-page">
+      <div ref={timerFullscreenRef} className={`page-content timer-page ${timerFullscreen ? "timer-fullscreen-mode" : ""}`}>
         {renderPageHeading('FOCUS MODE', <>Find your <span>flow.</span></>, 'Set aside distractions and give one task your attention.')}
 
         <div className="timer-layout">
           <section className="timer-card">
-            <div className="timer-mode-tabs">
+            <div className="timer-fullscreen-toolbar"><span>FOCENTRA · FOCUS MODE</span><button className="timer-fullscreen-button" onClick={() => void toggleTimerFullscreen()}>{timerFullscreen ? <><X size={16} /> Exit full screen</> : <><Expand size={16} /> Maximize timer</>}</button></div>
+            {!timerFullscreen && <div className="timer-mode-tabs">
               <button className={`timer-tab ${timerMode === 'focus' ? 'timer-tab-active' : ''}`} onClick={() => selectTimerMode('focus')}><Target size={16} />Focus</button>
               <button className={`timer-tab ${timerMode === 'break' ? 'timer-tab-active' : ''}`} onClick={() => selectTimerMode('break')}><Leaf size={16} />Break</button>
-            </div>
+            </div>}
 
             <div className={`timer-ring ${timerMode === 'break' ? 'timer-ring-break' : ''}`}>
               <svg className="timer-svg" viewBox="0 0 200 200">
@@ -1335,19 +1374,19 @@ function App() {
             </div>
 
             <div className="timer-controls">
-              <button className="timer-reset-button" onClick={resetTimer} aria-label="Reset timer"><RotateCcw size={19} /></button>
+              {!timerFullscreen && <button className="timer-reset-button" onClick={resetTimer} aria-label="Reset timer"><RotateCcw size={19} /></button>}
               <button className="timer-start-button" onClick={() => {
                 if (timerSeconds <= 0) setTimerSeconds((timerMode === 'focus' ? focusMinutes : breakMinutes) * 60)
                 setTimerRunning((previous) => !previous)
               }}>
                 {timerRunning ? <><Pause size={17} />Pause timer</> : <><Play size={17} fill="currentColor" />Start timer</>}
               </button>
-              <div className="timer-control-spacer" />
+              {timerFullscreen ? <button className="timer-reset-button timer-stop-button" onClick={() => { resetTimer(); setTimerFullscreen(false); if (document.fullscreenElement) void document.exitFullscreen().catch(() => undefined) }}><X size={18} /> Stop</button> : <div className="timer-control-spacer" />}
             </div>
-            <p className="timer-encouragement"><Sparkles size={15} />{timerNotice}</p>
+            {!timerFullscreen && <p className="timer-encouragement"><Sparkles size={15} />{timerNotice}</p>}
           </section>
 
-          <div className="timer-settings-column">
+          {!timerFullscreen && <div className="timer-settings-column">
             <section className="timer-settings-card">
               <div className="timer-card-heading">
                 <div className="timer-settings-icon"><Settings size={20} /></div>
@@ -1392,7 +1431,7 @@ function App() {
               <div className="summary-icon"><Trophy size={21} /></div>
               <div><span>YOUR PROGRESS</span><h3>{completedSessions.length} sessions completed</h3><p>{totalFocusMinutes} total minutes focused</p></div>
             </section>
-          </div>
+          </div>}
         </div>
       </div>
     )
@@ -1663,7 +1702,8 @@ function App() {
         {currentPage === 'Focus Timer' && renderTimer()}
         {currentPage === 'Friends' && renderFriends()}
         {currentPage === 'Chat' && renderChat()}
-        {currentPage === 'Study Groups' && userId && <StudyGroups userId={userId} currentProfile={profile} />}
+        {currentPage === 'Study Groups' && userId && <StudyGroups userId={userId} currentProfile={profile} onOpenGroupTimer={(groupId) => { setGroupTimerGroupId(groupId); navigate('Group Timer') }} />}
+        {currentPage === 'Group Timer' && userId && <GroupTimer userId={userId} initialGroupId={groupTimerGroupId} onBack={() => navigate('Study Groups')} />}
         {currentPage === 'Leaderboard' && userId && (
           <Leaderboard userId={userId} onStartFocus={() => navigate('Focus Timer')} />
         )}
